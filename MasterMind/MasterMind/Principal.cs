@@ -17,11 +17,5 @@ namespace MasterMind
             InitializeComponent();
         }
 
-
-
-
-
-
-
     }
 }
