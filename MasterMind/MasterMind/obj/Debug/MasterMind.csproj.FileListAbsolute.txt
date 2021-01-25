@@ -1,0 +1,12 @@
+C:\Users\viiksen\Documents\curso NET\Games\MasterMind\MasterMind\MasterMind\bin\Debug\MasterMind.exe.config
+C:\Users\viiksen\Documents\curso NET\Games\MasterMind\MasterMind\MasterMind\bin\Debug\MasterMind.exe
+C:\Users\viiksen\Documents\curso NET\Games\MasterMind\MasterMind\MasterMind\bin\Debug\MasterMind.pdb
+C:\Users\viiksen\Documents\curso NET\Games\MasterMind\MasterMind\MasterMind\obj\Debug\MasterMind.csprojAssemblyReference.cache
+C:\Users\viiksen\Documents\curso NET\Games\MasterMind\MasterMind\MasterMind\obj\Debug\MasterMind.Principal.resources
+C:\Users\viiksen\Documents\curso NET\Games\MasterMind\MasterMind\MasterMind\obj\Debug\MasterMind.Properties.Resources.resources
+C:\Users\viiksen\Documents\curso NET\Games\MasterMind\MasterMind\MasterMind\obj\Debug\MasterMind.csproj.GenerateResource.cache
+C:\Users\viiksen\Documents\curso NET\Games\MasterMind\MasterMind\MasterMind\obj\Debug\MasterMind.csproj.CoreCompileInputs.cache
+C:\Users\viiksen\Documents\curso NET\Games\MasterMind\MasterMind\MasterMind\obj\Debug\MasterMind.exe
+C:\Users\viiksen\Documents\curso NET\Games\MasterMind\MasterMind\MasterMind\obj\Debug\MasterMind.pdb
+C:\Users\viiksen\Documents\curso NET\Games\MasterMind\MasterMind\MasterMind\obj\Debug\MasterMind.Niveles.resources
+C:\Users\viiksen\Documents\curso NET\Games\MasterMind\MasterMind\MasterMind\obj\Debug\MasterMind.Opciones.resources
