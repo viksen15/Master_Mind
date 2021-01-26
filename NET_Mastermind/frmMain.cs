@@ -1,0 +1,88 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace NET_Mastermind {
+    public partial class frmMain : Form {
+        private Random rnd = new Random();
+
+        private Color[] coloresDisponibles = {
+            Color.Red, Color.Blue, Color.Green, Color.Yellow
+        };
+
+        private Color colorSeleccionado;
+
+        private int intento;
+        public frmMain() {
+            InitializeComponent();
+        }
+        private void nuevoJuegoToolStripMenuItem_Click(object sender, EventArgs e) {
+            NuevaPartida();
+        }
+        private void NuevaPartida() {
+            LlenarColoresDisponibles();
+            LlenarSolucion();
+
+            intento = 0;
+
+            colorSeleccionado = coloresDisponibles[0];
+
+            NuevaJugada();
+        }
+        private void LlenarColoresDisponibles() {
+            for (int i = 0; i < coloresDisponibles.Length; i++) {
+                PictureBox pb = new PictureBox();
+
+                pb.BackColor = coloresDisponibles[i];
+                
+                pnlColoresDisponibles.Controls.Add(pb);
+            }
+        }
+        private void LlenarSolucion() {
+            for (int i = 0; i < coloresDisponibles.Length; i++) {
+                PictureBox pb = new PictureBox();
+
+                pb.BackColor = coloresDisponibles[rnd.Next(coloresDisponibles.Length)];
+
+                pnlCombinacionSecreta.Controls.Add(pb);
+            }
+        }
+        private void NuevaJugada() {
+            for (int i = 0; i < coloresDisponibles.Length; i++) {
+                PictureBox pb = new PictureBox();
+
+                pb.BackColor = Color.White;
+
+                pnlJugadas.Controls.Add(pb);
+            }
+        }
+
+        private void CambiarColorSeleccionado(object sender, MouseEventArgs e) {
+            int posicionActiva = Array.IndexOf(coloresDisponibles, colorSeleccionado);
+
+            if (e.Button == MouseButtons.Left) {
+                if (posicionActiva + 1 == coloresDisponibles.Length) {
+                    colorSeleccionado = coloresDisponibles[0];
+                } else {
+                    colorSeleccionado = coloresDisponibles[posicionActiva + 1];
+                }           
+            }
+
+            if (e.Button == MouseButtons.Right) {
+                if (posicionActiva-1==-1) {
+                    colorSeleccionado = coloresDisponibles[coloresDisponibles.Length - 1];
+                } else {
+                    colorSeleccionado = coloresDisponibles[posicionActiva - 1];
+                }
+            }
+
+            // pictureBox1.BackColor = colorSeleccionado;
+        }
+    }
+}

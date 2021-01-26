@@ -1,0 +1,10 @@
+C:\Users\Iago\source\repos\NET_Mastermind\bin\Debug\NET_Mastermind.exe.config
+C:\Users\Iago\source\repos\NET_Mastermind\bin\Debug\NET_Mastermind.exe
+C:\Users\Iago\source\repos\NET_Mastermind\bin\Debug\NET_Mastermind.pdb
+C:\Users\Iago\source\repos\NET_Mastermind\obj\Debug\NET_Mastermind.csprojAssemblyReference.cache
+C:\Users\Iago\source\repos\NET_Mastermind\obj\Debug\NET_Mastermind.frmMain.resources
+C:\Users\Iago\source\repos\NET_Mastermind\obj\Debug\NET_Mastermind.Properties.Resources.resources
+C:\Users\Iago\source\repos\NET_Mastermind\obj\Debug\NET_Mastermind.csproj.GenerateResource.cache
+C:\Users\Iago\source\repos\NET_Mastermind\obj\Debug\NET_Mastermind.csproj.CoreCompileInputs.cache
+C:\Users\Iago\source\repos\NET_Mastermind\obj\Debug\NET_Mastermind.exe
+C:\Users\Iago\source\repos\NET_Mastermind\obj\Debug\NET_Mastermind.pdb
