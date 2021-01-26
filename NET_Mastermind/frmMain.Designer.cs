@@ -37,7 +37,7 @@ namespace NET_Mastermind {
             this.gbSolucion = new System.Windows.Forms.GroupBox();
             this.pnlCombinacionSecreta = new System.Windows.Forms.TableLayoutPanel();
             this.pnlJugadas = new System.Windows.Forms.TableLayoutPanel();
-            this.pnIntentos = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlTesting = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mnuApp.SuspendLayout();
             this.gbColoresDisponibles.SuspendLayout();
@@ -174,19 +174,20 @@ namespace NET_Mastermind {
             this.pnlJugadas.Size = new System.Drawing.Size(250, 56);
             this.pnlJugadas.TabIndex = 3;
             // 
-            // pnIntentos
+            // pnlTesting
             // 
-            this.pnIntentos.ColumnCount = 4;
-            this.pnIntentos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnIntentos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnIntentos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnIntentos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnIntentos.Location = new System.Drawing.Point(373, 43);
-            this.pnIntentos.Name = "pnIntentos";
-            this.pnIntentos.RowCount = 1;
-            this.pnIntentos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnIntentos.Size = new System.Drawing.Size(224, 56);
-            this.pnIntentos.TabIndex = 4;
+            this.pnlTesting.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnlTesting.ColumnCount = 4;
+            this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlTesting.Location = new System.Drawing.Point(373, 43);
+            this.pnlTesting.Name = "pnlTesting";
+            this.pnlTesting.RowCount = 1;
+            this.pnlTesting.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.pnlTesting.Size = new System.Drawing.Size(224, 56);
+            this.pnlTesting.TabIndex = 4;
             // 
             // pictureBox1
             // 
@@ -202,7 +203,7 @@ namespace NET_Mastermind {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(883, 481);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pnIntentos);
+            this.Controls.Add(this.pnlTesting);
             this.Controls.Add(this.pnlJugadas);
             this.Controls.Add(this.gbSolucion);
             this.Controls.Add(this.gbColoresDisponibles);
@@ -233,7 +234,7 @@ namespace NET_Mastermind {
         private System.Windows.Forms.ToolStripMenuItem acercaDeMastermindNETToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel pnlJugadas;
-        private System.Windows.Forms.TableLayoutPanel pnIntentos;
+        private System.Windows.Forms.TableLayoutPanel pnlTesting;
         private System.Windows.Forms.TableLayoutPanel pnlColoresDisponibles;
         private System.Windows.Forms.TableLayoutPanel pnlCombinacionSecreta;
         private System.Windows.Forms.PictureBox pictureBox1;
