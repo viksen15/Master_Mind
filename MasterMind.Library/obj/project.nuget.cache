@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VMRgwZecYbVsQJX1/82QvrEuIhPtLWBGPr/79tMgstelMrAcc7mPMCX8xTY2KuDwoVviYAu+uf57SpEDGOtGqw==",
+  "dgSpecHash": "9hz0eZ9Yr7cAK9rpZnJIH86K83WX6tnvvAc0nGJnFTVPWw7+hebexgUIUvCRi5bOR0LBuvhupzQSlrjPpt/tnw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\wendy\\Desktop\\MasterMind\\MasterMind.Library\\MasterMind.Library.csproj",
+  "projectFilePath": "C:\\Proyectos-Weixin\\Master_Mind\\MasterMind.Library\\MasterMind.Library.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wendy\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\wendy\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wendy\\Desktop\\MasterMind\\MasterMind\\MasterMind.csproj": {}
+    "C:\\Proyectos-Weixin\\Master_Mind\\MasterMind\\MasterMind.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wendy\\Desktop\\MasterMind\\MasterMind.Library\\MasterMind.Library.csproj": {
+    "C:\\Proyectos-Weixin\\Master_Mind\\MasterMind.Library\\MasterMind.Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wendy\\Desktop\\MasterMind\\MasterMind.Library\\MasterMind.Library.csproj",
+        "projectUniqueName": "C:\\Proyectos-Weixin\\Master_Mind\\MasterMind.Library\\MasterMind.Library.csproj",
         "projectName": "MasterMind.Library",
-        "projectPath": "C:\\Users\\wendy\\Desktop\\MasterMind\\MasterMind.Library\\MasterMind.Library.csproj",
+        "projectPath": "C:\\Proyectos-Weixin\\Master_Mind\\MasterMind.Library\\MasterMind.Library.csproj",
         "packagesPath": "C:\\Users\\wendy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wendy\\Desktop\\MasterMind\\MasterMind.Library\\obj\\",
+        "outputPath": "C:\\Proyectos-Weixin\\Master_Mind\\MasterMind.Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\wendy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,14 +61,14 @@
         }
       }
     },
-    "C:\\Users\\wendy\\Desktop\\MasterMind\\MasterMind\\MasterMind.csproj": {
+    "C:\\Proyectos-Weixin\\Master_Mind\\MasterMind\\MasterMind.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wendy\\Desktop\\MasterMind\\MasterMind\\MasterMind.csproj",
+        "projectUniqueName": "C:\\Proyectos-Weixin\\Master_Mind\\MasterMind\\MasterMind.csproj",
         "projectName": "MasterMind",
-        "projectPath": "C:\\Users\\wendy\\Desktop\\MasterMind\\MasterMind\\MasterMind.csproj",
+        "projectPath": "C:\\Proyectos-Weixin\\Master_Mind\\MasterMind\\MasterMind.csproj",
         "packagesPath": "C:\\Users\\wendy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wendy\\Desktop\\MasterMind\\MasterMind\\obj\\",
+        "outputPath": "C:\\Proyectos-Weixin\\Master_Mind\\MasterMind\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\wendy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -85,8 +85,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\wendy\\Desktop\\MasterMind\\MasterMind.Library\\MasterMind.Library.csproj": {
-                "projectPath": "C:\\Users\\wendy\\Desktop\\MasterMind\\MasterMind.Library\\MasterMind.Library.csproj"
+              "C:\\Proyectos-Weixin\\Master_Mind\\MasterMind.Library\\MasterMind.Library.csproj": {
+                "projectPath": "C:\\Proyectos-Weixin\\Master_Mind\\MasterMind.Library\\MasterMind.Library.csproj"
               }
             }
           }

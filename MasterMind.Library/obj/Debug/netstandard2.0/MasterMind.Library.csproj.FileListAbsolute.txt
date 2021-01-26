@@ -7,3 +7,12 @@ C:\Users\wendy\Desktop\MasterMind\MasterMind.Library\obj\Debug\netstandard2.0\Ma
 C:\Users\wendy\Desktop\MasterMind\MasterMind.Library\obj\Debug\netstandard2.0\MasterMind.Library.csproj.CoreCompileInputs.cache
 C:\Users\wendy\Desktop\MasterMind\MasterMind.Library\obj\Debug\netstandard2.0\MasterMind.Library.dll
 C:\Users\wendy\Desktop\MasterMind\MasterMind.Library\obj\Debug\netstandard2.0\MasterMind.Library.pdb
+C:\Proyectos-Weixin\Master_Mind\MasterMind.Library\bin\Debug\netstandard2.0\MasterMind.Library.deps.json
+C:\Proyectos-Weixin\Master_Mind\MasterMind.Library\bin\Debug\netstandard2.0\MasterMind.Library.dll
+C:\Proyectos-Weixin\Master_Mind\MasterMind.Library\bin\Debug\netstandard2.0\MasterMind.Library.pdb
+C:\Proyectos-Weixin\Master_Mind\MasterMind.Library\obj\Debug\netstandard2.0\MasterMind.Library.csprojAssemblyReference.cache
+C:\Proyectos-Weixin\Master_Mind\MasterMind.Library\obj\Debug\netstandard2.0\MasterMind.Library.AssemblyInfoInputs.cache
+C:\Proyectos-Weixin\Master_Mind\MasterMind.Library\obj\Debug\netstandard2.0\MasterMind.Library.AssemblyInfo.cs
+C:\Proyectos-Weixin\Master_Mind\MasterMind.Library\obj\Debug\netstandard2.0\MasterMind.Library.csproj.CoreCompileInputs.cache
+C:\Proyectos-Weixin\Master_Mind\MasterMind.Library\obj\Debug\netstandard2.0\MasterMind.Library.dll
+C:\Proyectos-Weixin\Master_Mind\MasterMind.Library\obj\Debug\netstandard2.0\MasterMind.Library.pdb

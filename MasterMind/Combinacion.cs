@@ -1,68 +1,79 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace MasterMind
 {
     public partial class Combinacion : UserControl
     {
-        private readonly Color[] coloresDisponibles;
-        private int[] coloresMarcados;
-        private readonly bool bloqueado;
+        private readonly IEnumerable<Color> coloresDisponibles;
+        private readonly PictureBox[] pictureBoxes;
+        private bool bloqueado;
 
-        public Combinacion(Color[] coloresDisponibles, int[] coloresIniciales, bool bloqueado = true)
+        public Combinacion(IEnumerable<Color> coloresDisponibles, IEnumerable<int> coloresIniciales, bool bloqueado = true)
         {
             InitializeComponent();
 
             this.coloresDisponibles = coloresDisponibles;
-            this.coloresMarcados = coloresIniciales;
             this.bloqueado = bloqueado;
 
-            PictureBox[] pictureBoxes = new[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6 };
+            pictureBoxes = new[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6 };
 
-            for (int i = 0; i < coloresIniciales.Length; i++)
+            for (int i = 0; i < coloresIniciales.Count(); i++)
             {
-                pictureBoxes[i].BackColor = coloresDisponibles[coloresIniciales[i]];
+                pictureBoxes[i].BackColor = coloresDisponibles.ElementAt(coloresIniciales.ElementAt(i));
                 pictureBoxes[i].MouseClick += Combinacion_MouseClick;
             }
 
-            for (int i = coloresIniciales.Length; i < pictureBoxes.Length; i++)
+            for (int i = coloresIniciales.Count(); i < pictureBoxes.Length; i++)
             {
                 pictureBoxes[i].Visible = false;
             }
         }
-        //3
-        public void ComprobacionColores(Color[] colores, object obj)
+
+        public IEnumerable<int> ObtenerYBloquear()
         {
-            if (obj is GroupBox lv)
+            bloqueado = true;
+            List<int> resultado = new List<int>();
+            // Aqui vamos a construir resultado
+            foreach(PictureBox p in pictureBoxes)
             {
-                foreach (Control c in lv.Controls)
-                {
-                    MessageBox.Show(c.Text);
-                }
+                if (p.Visible)
+                    resultado.Add(ObtenerIndice(p.BackColor));
             }
-            else
-            {
-                MessageBox.Show("no es lv");
-            }
+            return resultado;
         }
+
+        private int ObtenerIndice(Color color)
+        {
+            return Enumerable
+                    .Range(0, coloresDisponibles.Count())
+                    .Where(i => coloresDisponibles.ElementAt(i) == color)
+                    .First();
+        }
+
         private void Combinacion_MouseClick(object sender, MouseEventArgs e)
         {
             if (sender is PictureBox box && !bloqueado)
             {
-                var index = int.Parse(box.Name.Substring(box.Name.Length - 1)) - 1;
-
+                // Obtener indice del color en coloresDisponibles
+                var index = ObtenerIndice(box.BackColor);
+                // Aumentarlo o disminuirlo segun click
                 if(e.Button == MouseButtons.Left)
-                    coloresMarcados[index] += 1; 
+                    index += 1;
                 else if (e.Button == MouseButtons.Right)
-                    coloresMarcados[index] -= 1;
+                    index -= 1;
 
-                if (coloresMarcados[index] >= coloresDisponibles.Length)
-                    coloresMarcados[index] = 0;
+                // Comprobar que no salga de limites
+                if (index >= coloresDisponibles.Count())
+                    index = 0;
 
-                if (coloresMarcados[index] < 0)
-                    coloresMarcados[index] = coloresDisponibles.Length - 1;
+                if (index < 0)
+                    index = coloresDisponibles.Count() - 1;
 
-                box.BackColor = coloresDisponibles[coloresMarcados[index]];
+                // Cambiar color
+                box.BackColor = coloresDisponibles.ElementAt(index);
             }
         }
 

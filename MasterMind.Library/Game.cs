@@ -20,7 +20,7 @@ namespace MasterMind.Library
         private readonly int colores;
         private readonly int intentos;
         public readonly int[] combinacionSecreta;
-        public readonly List<int[]> combinacionesProbadas = new List<int[]>();
+        public readonly List<IEnumerable<int>> combinacionesProbadas = new List<IEnumerable<int>>();
         public readonly List<char[]> resultados = new List<char[]>();
 
         public Game(int colores, int intentos)
@@ -35,7 +35,7 @@ namespace MasterMind.Library
             }
         }
 
-        public char[] ProbarCombinacion(int[] combinacion)
+        public char[] ProbarCombinacion(IEnumerable<int> combinacion)
         {
             if (combinacionesProbadas.Count > intentos) 
                 return null;
@@ -44,9 +44,9 @@ namespace MasterMind.Library
             char[] resultado = new char[LONGITUD_COMBINACION];
             for (int i = 0; i < LONGITUD_COMBINACION; i++)
             {
-                if (combinacion[i] == combinacionSecreta[i]) 
+                if (combinacion.ElementAt(i) == combinacionSecreta[i]) 
                     resultado[i] = CORRECTO;
-                else if (combinacionSecreta.Contains(combinacion[i])) 
+                else if (combinacionSecreta.Contains(combinacion.ElementAt(i))) 
                     resultado[i] = OTRA_POSICION;
                 else 
                     resultado[i] = INCORRECTO;

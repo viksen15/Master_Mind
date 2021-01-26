@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wendy\\Desktop\\MasterMind\\MasterMind.Library\\MasterMind.Library.csproj",
+      "projectUniqueName": "C:\\Proyectos-Weixin\\Master_Mind\\MasterMind.Library\\MasterMind.Library.csproj",
       "projectName": "MasterMind.Library",
-      "projectPath": "C:\\Users\\wendy\\Desktop\\MasterMind\\MasterMind.Library\\MasterMind.Library.csproj",
+      "projectPath": "C:\\Proyectos-Weixin\\Master_Mind\\MasterMind.Library\\MasterMind.Library.csproj",
       "packagesPath": "C:\\Users\\wendy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wendy\\Desktop\\MasterMind\\MasterMind.Library\\obj\\",
+      "outputPath": "C:\\Proyectos-Weixin\\Master_Mind\\MasterMind.Library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wendy\\AppData\\Roaming\\NuGet\\NuGet.Config",
