@@ -38,11 +38,6 @@ namespace MasterMind
             this.ColorSelec3 = new System.Windows.Forms.PictureBox();
             this.ColorSelec4 = new System.Windows.Forms.PictureBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog3 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog4 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog5 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog6 = new System.Windows.Forms.ColorDialog();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ColorSelec1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ColorSelec6)).BeginInit();
@@ -58,9 +53,9 @@ namespace MasterMind
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(362, 15);
+            this.label1.Size = new System.Drawing.Size(266, 15);
             this.label1.TabIndex = 7;
-            this.label1.Text = "HAZ CLICK EN CADA UNO PARA PODER SELECCIONAR";
+            this.label1.Text = "HAZ CLICK PARA PODER SELECCIONAR";
             // 
             // label2
             // 
@@ -75,58 +70,68 @@ namespace MasterMind
             // ColorSelec1
             // 
             this.ColorSelec1.BackColor = System.Drawing.SystemColors.Window;
+            this.ColorSelec1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ColorSelec1.Location = new System.Drawing.Point(25, 12);
             this.ColorSelec1.Name = "ColorSelec1";
             this.ColorSelec1.Size = new System.Drawing.Size(33, 35);
             this.ColorSelec1.TabIndex = 6;
             this.ColorSelec1.TabStop = false;
-            this.ColorSelec1.Click += new System.EventHandler(this.ColorSelec1_Click);
+            this.ColorSelec1.Click += new System.EventHandler(this.colorClick);
             // 
             // ColorSelec6
             // 
             this.ColorSelec6.BackColor = System.Drawing.SystemColors.Window;
+            this.ColorSelec6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ColorSelec6.Location = new System.Drawing.Point(320, 12);
             this.ColorSelec6.Name = "ColorSelec6";
             this.ColorSelec6.Size = new System.Drawing.Size(33, 35);
             this.ColorSelec6.TabIndex = 5;
             this.ColorSelec6.TabStop = false;
+            this.ColorSelec6.Click += new System.EventHandler(this.colorClick);
             // 
             // ColorSelec5
             // 
             this.ColorSelec5.BackColor = System.Drawing.SystemColors.Window;
+            this.ColorSelec5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ColorSelec5.Location = new System.Drawing.Point(258, 12);
             this.ColorSelec5.Name = "ColorSelec5";
             this.ColorSelec5.Size = new System.Drawing.Size(33, 35);
             this.ColorSelec5.TabIndex = 4;
             this.ColorSelec5.TabStop = false;
+            this.ColorSelec5.Click += new System.EventHandler(this.colorClick);
             // 
             // ColorSelec2
             // 
             this.ColorSelec2.BackColor = System.Drawing.SystemColors.Window;
+            this.ColorSelec2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ColorSelec2.Location = new System.Drawing.Point(82, 12);
             this.ColorSelec2.Name = "ColorSelec2";
             this.ColorSelec2.Size = new System.Drawing.Size(33, 35);
             this.ColorSelec2.TabIndex = 2;
             this.ColorSelec2.TabStop = false;
-            this.ColorSelec2.Click += new System.EventHandler(this.ColorSelec2_Click);
+            this.ColorSelec2.Click += new System.EventHandler(this.colorClick);
             // 
             // ColorSelec3
             // 
             this.ColorSelec3.BackColor = System.Drawing.SystemColors.Window;
+            this.ColorSelec3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ColorSelec3.Location = new System.Drawing.Point(140, 12);
             this.ColorSelec3.Name = "ColorSelec3";
             this.ColorSelec3.Size = new System.Drawing.Size(33, 35);
             this.ColorSelec3.TabIndex = 1;
             this.ColorSelec3.TabStop = false;
+            this.ColorSelec3.Click += new System.EventHandler(this.colorClick);
             // 
             // ColorSelec4
             // 
             this.ColorSelec4.BackColor = System.Drawing.SystemColors.Window;
+            this.ColorSelec4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ColorSelec4.Location = new System.Drawing.Point(199, 12);
             this.ColorSelec4.Name = "ColorSelec4";
             this.ColorSelec4.Size = new System.Drawing.Size(33, 35);
             this.ColorSelec4.TabIndex = 0;
             this.ColorSelec4.TabStop = false;
+            this.ColorSelec4.Click += new System.EventHandler(this.colorClick);
             // 
             // button1
             // 
@@ -140,6 +145,7 @@ namespace MasterMind
             // 
             // Opciones
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -155,6 +161,7 @@ namespace MasterMind
             this.Controls.Add(this.ColorSelec3);
             this.Controls.Add(this.ColorSelec4);
             this.Name = "Opciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Opciones del juego";
             ((System.ComponentModel.ISupportInitialize)(this.ColorSelec1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ColorSelec6)).EndInit();
@@ -178,11 +185,6 @@ namespace MasterMind
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.ColorDialog colorDialog2;
-        private System.Windows.Forms.ColorDialog colorDialog3;
-        private System.Windows.Forms.ColorDialog colorDialog4;
-        private System.Windows.Forms.ColorDialog colorDialog5;
-        private System.Windows.Forms.ColorDialog colorDialog6;
         private System.Windows.Forms.Button button1;
     }
 }

@@ -12,38 +12,38 @@ namespace MasterMind
 {
     public partial class Niveles : Form
     {
-        Principal modo = new Principal();
+        public int nivel = 0;
         public Niveles()
         {
             InitializeComponent();
         }
-
+        // CERRAMOS EL FORMULARIO AL CERRAR VENTANA
         private void Niveles_FormClosing(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        // CARGAMOS EL MODO PRINCIPIANTE AL PULSASR CANCELAR
         private void cancelar_Click(object sender, EventArgs e)
         {
-            modo.ModoPrincipiante();
+            nivel = 0;
             this.Close();
         }
-
+        // CARGAMOS EL NIVEL DE JUEGO DESEADO AL PULSAR ACEPTAR
         private void aceptar_Click(object sender, EventArgs e)
         {
             if (principianteB.Checked)
             {
-                modo.ModoPrincipiante();
+                nivel = 0;
                 this.Close();
             }
             if (medioB.Checked)
             {
-                modo.ModoMedio();
+                nivel = 1;
                 this.Close();
             }
             if (avanzadoB.Checked)
             {
-                modo.ModoAvanzado();
+                nivel = 2;
                 this.Close();
             }
         }

@@ -104,28 +104,28 @@ namespace MasterMind
             // nivelToolStripMenuItem
             // 
             this.nivelToolStripMenuItem.Name = "nivelToolStripMenuItem";
-            this.nivelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nivelToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.nivelToolStripMenuItem.Text = "Nivel";
             this.nivelToolStripMenuItem.Click += new System.EventHandler(this.nivelToolStripMenuItem_Click);
             // 
             // opcionesToolStripMenuItem
             // 
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.opcionesToolStripMenuItem.Text = "Opciones";
             this.opcionesToolStripMenuItem.Click += new System.EventHandler(this.opcionesToolStripMenuItem_Click);
             // 
             // juegoNuevoToolStripMenuItem
             // 
             this.juegoNuevoToolStripMenuItem.Name = "juegoNuevoToolStripMenuItem";
-            this.juegoNuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.juegoNuevoToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.juegoNuevoToolStripMenuItem.Text = "Juego nuevo";
             this.juegoNuevoToolStripMenuItem.Click += new System.EventHandler(this.juegoNuevoToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -232,7 +232,6 @@ namespace MasterMind
             this.coloresDispo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.coloresDispo.Size = new System.Drawing.Size(51, 307);
             this.coloresDispo.TabIndex = 16;
-            this.coloresDispo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.coloresDispo_MouseDown);
             // 
             // color6
             // 
@@ -242,7 +241,7 @@ namespace MasterMind
             this.color6.Size = new System.Drawing.Size(43, 44);
             this.color6.TabIndex = 5;
             this.color6.TabStop = false;
-            this.color6.Click += new System.EventHandler(this.clickColores);
+            this.color6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clicRaton);
             // 
             // color4
             // 
@@ -252,7 +251,7 @@ namespace MasterMind
             this.color4.Size = new System.Drawing.Size(44, 43);
             this.color4.TabIndex = 3;
             this.color4.TabStop = false;
-            this.color4.Click += new System.EventHandler(this.clickColores);
+            this.color4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clicRaton);
             // 
             // color3
             // 
@@ -262,7 +261,7 @@ namespace MasterMind
             this.color3.Size = new System.Drawing.Size(44, 43);
             this.color3.TabIndex = 2;
             this.color3.TabStop = false;
-            this.color3.Click += new System.EventHandler(this.clickColores);
+            this.color3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clicRaton);
             // 
             // color2
             // 
@@ -272,7 +271,7 @@ namespace MasterMind
             this.color2.Size = new System.Drawing.Size(44, 43);
             this.color2.TabIndex = 1;
             this.color2.TabStop = false;
-            this.color2.Click += new System.EventHandler(this.clickColores);
+            this.color2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clicRaton);
             // 
             // color1
             // 
@@ -282,7 +281,7 @@ namespace MasterMind
             this.color1.Size = new System.Drawing.Size(44, 43);
             this.color1.TabIndex = 0;
             this.color1.TabStop = false;
-            this.color1.Click += new System.EventHandler(this.clickColores);
+            this.color1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clicRaton);
             // 
             // color5
             // 
@@ -292,7 +291,7 @@ namespace MasterMind
             this.color5.Size = new System.Drawing.Size(43, 44);
             this.color5.TabIndex = 4;
             this.color5.TabStop = false;
-            this.color5.Click += new System.EventHandler(this.clickColores);
+            this.color5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.clicRaton);
             // 
             // solucion
             // 
@@ -355,7 +354,7 @@ namespace MasterMind
             this.check1.Size = new System.Drawing.Size(19, 18);
             this.check1.TabIndex = 19;
             this.check1.UseVisualStyleBackColor = true;
-            this.check1.Click += new System.EventHandler(this.check);
+     //       this.check1.Click += new System.EventHandler(this.check);
             // 
             // check2
             // 
@@ -366,7 +365,7 @@ namespace MasterMind
             this.check2.Size = new System.Drawing.Size(19, 18);
             this.check2.TabIndex = 20;
             this.check2.UseVisualStyleBackColor = true;
-            this.check2.Click += new System.EventHandler(this.check);
+       //     this.check2.Click += new System.EventHandler(this.check);
             // 
             // check3
             // 
@@ -377,7 +376,7 @@ namespace MasterMind
             this.check3.Size = new System.Drawing.Size(19, 18);
             this.check3.TabIndex = 21;
             this.check3.UseVisualStyleBackColor = true;
-            this.check3.Click += new System.EventHandler(this.check);
+      //      this.check3.Click += new System.EventHandler(this.check);
             // 
             // check4
             // 
@@ -388,7 +387,7 @@ namespace MasterMind
             this.check4.Size = new System.Drawing.Size(19, 18);
             this.check4.TabIndex = 22;
             this.check4.UseVisualStyleBackColor = true;
-            this.check4.Click += new System.EventHandler(this.check);
+      //      this.check4.Click += new System.EventHandler(this.check);
             // 
             // check5
             // 
@@ -399,7 +398,7 @@ namespace MasterMind
             this.check5.Size = new System.Drawing.Size(19, 18);
             this.check5.TabIndex = 23;
             this.check5.UseVisualStyleBackColor = true;
-            this.check5.Click += new System.EventHandler(this.check);
+      //      this.check5.Click += new System.EventHandler(this.check);
             // 
             // check6
             // 
@@ -410,7 +409,7 @@ namespace MasterMind
             this.check6.Size = new System.Drawing.Size(19, 18);
             this.check6.TabIndex = 24;
             this.check6.UseVisualStyleBackColor = true;
-            this.check6.Click += new System.EventHandler(this.check);
+     //       this.check6.Click += new System.EventHandler(this.check);
             // 
             // check7
             // 
@@ -421,7 +420,7 @@ namespace MasterMind
             this.check7.Size = new System.Drawing.Size(19, 18);
             this.check7.TabIndex = 25;
             this.check7.UseVisualStyleBackColor = true;
-            this.check7.Click += new System.EventHandler(this.check);
+      //      this.check7.Click += new System.EventHandler(this.check);
             // 
             // check8
             // 
@@ -432,7 +431,7 @@ namespace MasterMind
             this.check8.Size = new System.Drawing.Size(18, 18);
             this.check8.TabIndex = 26;
             this.check8.UseVisualStyleBackColor = true;
-            this.check8.Click += new System.EventHandler(this.check);
+      //      this.check8.Click += new System.EventHandler(this.check);
             // 
             // check9
             // 
@@ -443,7 +442,7 @@ namespace MasterMind
             this.check9.Size = new System.Drawing.Size(18, 18);
             this.check9.TabIndex = 27;
             this.check9.UseVisualStyleBackColor = true;
-            this.check9.Click += new System.EventHandler(this.check);
+     //       this.check9.Click += new System.EventHandler(this.check);
             // 
             // check10
             // 
@@ -454,7 +453,7 @@ namespace MasterMind
             this.check10.Size = new System.Drawing.Size(19, 18);
             this.check10.TabIndex = 28;
             this.check10.UseVisualStyleBackColor = true;
-            this.check10.Click += new System.EventHandler(this.check);
+      //      this.check10.Click += new System.EventHandler(this.check);
             // 
             // Principal
             // 

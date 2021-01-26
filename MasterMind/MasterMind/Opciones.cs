@@ -16,48 +16,49 @@ namespace MasterMind
         {
             InitializeComponent();
         }
-
+        // CERRAMOS EL FORMULARIO AL CERRAR LA VENTANA
         private void Opciones_FormClosing(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void ColorSelec1_Click(object sender, EventArgs e)
+        // OCULTAMOS PICTUREBOX DE SELECCION DEPENDIENDO DEL NIVEL SELECCIONADO
+        /*  private void cuantosColores()
+          {
+              if (ModoPrincipiante())
+              {
+                  ColorSelec5.Visible = false;
+                  ColorSelec6.Visible = false;
+                  ColorSelec5.Enabled = false;
+                  ColorSelec6.Enabled = false;
+              }
+              if (ModoMedio())
+              {
+                  ColorSelec6.Visible = false;
+                  ColorSelec6.Enabled = false;
+              }
+          }*/
+        // LE DAMOS COLOR A LOS PICTUREBOX DISPONIBLES
+        private void colorClick(object sender, EventArgs e)
         {
+          // cuantosColores();
+
             if (colorDialog1.ShowDialog() == DialogResult.OK)
-            { ColorSelec1.BackColor = colorDialog1.Color; }
-        }
+             ColorSelec1.BackColor = colorDialog1.Color;
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+                ColorSelec2.BackColor = colorDialog1.Color;
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+                ColorSelec3.BackColor = colorDialog1.Color;
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+                ColorSelec4.BackColor = colorDialog1.Color;
 
-        private void ColorSelec2_Click(object sender, EventArgs e)
-        {
-            if (colorDialog2.ShowDialog() == DialogResult.OK)
-            { ColorSelec2.BackColor = colorDialog2.Color; }
+            if (colorDialog1.ShowDialog() == DialogResult.OK && ColorSelec5.Enabled == true)
+                ColorSelec5.BackColor = colorDialog1.Color;
+            if (colorDialog1.ShowDialog() == DialogResult.OK && ColorSelec6.Enabled == true)
+                ColorSelec6.BackColor = colorDialog1.Color;
         }
-        private void ColorSelec3_Click(object sender, EventArgs e)
-        {
-            if (colorDialog3.ShowDialog() == DialogResult.OK)
-            { ColorSelec3.BackColor = colorDialog3.Color; }
-        }
-        private void ColorSelec4_Click(object sender, EventArgs e)
-        {
-            if (colorDialog4.ShowDialog() == DialogResult.OK)
-            { ColorSelec4.BackColor = colorDialog4.Color; }
-        }
-        private void ColorSelec5_Click(object sender, EventArgs e)
-        {
-            if (colorDialog5.ShowDialog() == DialogResult.OK)
-            { ColorSelec5.BackColor = colorDialog5.Color; }
-        }
-        private void ColorSelec6_Click(object sender, EventArgs e)
-        {
-            if (colorDialog6.ShowDialog() == DialogResult.OK)
-            { ColorSelec6.BackColor = colorDialog6.Color; }
-        }
-
         private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            
+        { 
+
         }
     }
 }
