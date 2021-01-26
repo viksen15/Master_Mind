@@ -161,6 +161,7 @@ namespace NET_Mastermind {
             // 
             // pnlJugadas
             // 
+            this.pnlJugadas.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.pnlJugadas.ColumnCount = 5;
             this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));

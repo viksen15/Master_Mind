@@ -113,6 +113,15 @@ namespace NET_Mastermind {
 
             ComprobarNegras(jugada);
             ComprobarBlancas(jugada);
+
+            if (jugada == solucion) {
+                MessageBox.Show("Has acertado la combinación.");
+            } else {
+                pnlJugadas.RowCount += 1;
+                pnlJugadas.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+                pnlJugadas.Size = new Size(pnlJugadas.Size.Width, pnlJugadas.Size.Height+56);
+                pnlJugadas.Controls.Add(new PictureBox { BackColor = Color.Red }, 0, 1);
+            }
         }
         private void ComprobarNegras(Color[] jugada) {
             for (int i=0; i<jugada.Length; i++) {
@@ -126,15 +135,21 @@ namespace NET_Mastermind {
             }
         }
         private void ComprobarBlancas(Color[] jugada) {
+            Color[] BlancasColocadas = new Color[4];
+            
             for (int i=0; i<jugada.Length; i++) {
                 Color c = jugada[i];
 
-                if (jugada[i] != solucion[i] && solucion.Contains(jugada[i])) {
-                    PictureBox pb = new PictureBox() {
-                        BackColor = Color.White,
-                    };
+                if (c != solucion[i] && solucion.Contains(c)) {
+                    if (!BlancasColocadas.Contains(c)) {
+                        PictureBox pb = new PictureBox() {
+                            BackColor = Color.White,
+                        };
 
-                    pnlTesting.Controls.Add(pb);
+                        pnlTesting.Controls.Add(pb);
+
+                        BlancasColocadas[i] = c;
+                    }                        
                 }
             }
         }
