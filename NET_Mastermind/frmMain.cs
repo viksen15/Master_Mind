@@ -40,7 +40,7 @@ namespace NET_Mastermind {
                 PictureBox pb = new PictureBox();
 
                 pb.BackColor = coloresDisponibles[i];
-                
+
                 pnlColoresDisponibles.Controls.Add(pb);
             }
         }
@@ -58,11 +58,11 @@ namespace NET_Mastermind {
                 PictureBox pb = new PictureBox();
 
                 pb.BackColor = Color.White;
+                pb.Click += BotonJugadaClick;
 
                 pnlJugadas.Controls.Add(pb);
             }
         }
-
         private void CambiarColorSeleccionado(object sender, MouseEventArgs e) {
             int posicionActiva = Array.IndexOf(coloresDisponibles, colorSeleccionado);
 
@@ -71,11 +71,11 @@ namespace NET_Mastermind {
                     colorSeleccionado = coloresDisponibles[0];
                 } else {
                     colorSeleccionado = coloresDisponibles[posicionActiva + 1];
-                }           
+                }
             }
 
             if (e.Button == MouseButtons.Right) {
-                if (posicionActiva-1==-1) {
+                if (posicionActiva - 1 == -1) {
                     colorSeleccionado = coloresDisponibles[coloresDisponibles.Length - 1];
                 } else {
                     colorSeleccionado = coloresDisponibles[posicionActiva - 1];
@@ -83,6 +83,10 @@ namespace NET_Mastermind {
             }
 
             // pictureBox1.BackColor = colorSeleccionado;
+        }
+        private void BotonJugadaClick(object sender, System.EventArgs e) {
+            PictureBox p = (PictureBox)sender;
+            p.BackColor = colorSeleccionado;
         }
     }
 }
