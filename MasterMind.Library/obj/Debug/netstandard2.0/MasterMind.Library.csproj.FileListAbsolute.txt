@@ -1,0 +1,9 @@
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Library\bin\Debug\netstandard2.0\MasterMind.Library.deps.json
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Library\bin\Debug\netstandard2.0\MasterMind.Library.dll
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Library\bin\Debug\netstandard2.0\MasterMind.Library.pdb
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Library\obj\Debug\netstandard2.0\MasterMind.Library.csprojAssemblyReference.cache
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Library\obj\Debug\netstandard2.0\MasterMind.Library.AssemblyInfoInputs.cache
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Library\obj\Debug\netstandard2.0\MasterMind.Library.AssemblyInfo.cs
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Library\obj\Debug\netstandard2.0\MasterMind.Library.csproj.CoreCompileInputs.cache
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Library\obj\Debug\netstandard2.0\MasterMind.Library.dll
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Library\obj\Debug\netstandard2.0\MasterMind.Library.pdb

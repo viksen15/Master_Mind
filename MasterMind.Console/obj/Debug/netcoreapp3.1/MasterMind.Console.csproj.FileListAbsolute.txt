@@ -1,0 +1,16 @@
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\bin\Debug\netcoreapp3.1\MasterMind.Console.exe
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\bin\Debug\netcoreapp3.1\MasterMind.Console.deps.json
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\bin\Debug\netcoreapp3.1\MasterMind.Console.runtimeconfig.json
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\bin\Debug\netcoreapp3.1\MasterMind.Console.runtimeconfig.dev.json
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\bin\Debug\netcoreapp3.1\MasterMind.Console.dll
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\bin\Debug\netcoreapp3.1\MasterMind.Console.pdb
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\bin\Debug\netcoreapp3.1\MasterMind.Library.dll
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\bin\Debug\netcoreapp3.1\MasterMind.Library.pdb
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\obj\Debug\netcoreapp3.1\MasterMind.Console.csprojAssemblyReference.cache
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\obj\Debug\netcoreapp3.1\MasterMind.Console.AssemblyInfoInputs.cache
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\obj\Debug\netcoreapp3.1\MasterMind.Console.AssemblyInfo.cs
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\obj\Debug\netcoreapp3.1\MasterMind.Console.csproj.CoreCompileInputs.cache
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\obj\Debug\netcoreapp3.1\MasterMind.Console.csproj.CopyComplete
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\obj\Debug\netcoreapp3.1\MasterMind.Console.dll
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\obj\Debug\netcoreapp3.1\MasterMind.Console.pdb
+C:\Users\wendy\Desktop\MasterMind\MasterMind.Console\obj\Debug\netcoreapp3.1\MasterMind.Console.genruntimeconfig.cache
