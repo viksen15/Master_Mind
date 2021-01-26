@@ -125,11 +125,11 @@ namespace NET_Mastermind {
             this.pnlColoresDisponibles.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.pnlColoresDisponibles.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.pnlColoresDisponibles.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlColoresDisponibles.Location = new System.Drawing.Point(6, 38);
+            this.pnlColoresDisponibles.Location = new System.Drawing.Point(6, 19);
             this.pnlColoresDisponibles.Name = "pnlColoresDisponibles";
             this.pnlColoresDisponibles.RowCount = 1;
             this.pnlColoresDisponibles.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnlColoresDisponibles.Size = new System.Drawing.Size(224, 56);
+            this.pnlColoresDisponibles.Size = new System.Drawing.Size(224, 75);
             this.pnlColoresDisponibles.TabIndex = 5;
             this.pnlColoresDisponibles.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CambiarColorSeleccionado);
             // 
@@ -152,11 +152,11 @@ namespace NET_Mastermind {
             this.pnlCombinacionSecreta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.pnlCombinacionSecreta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.pnlCombinacionSecreta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlCombinacionSecreta.Location = new System.Drawing.Point(6, 38);
+            this.pnlCombinacionSecreta.Location = new System.Drawing.Point(6, 19);
             this.pnlCombinacionSecreta.Name = "pnlCombinacionSecreta";
             this.pnlCombinacionSecreta.RowCount = 1;
             this.pnlCombinacionSecreta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnlCombinacionSecreta.Size = new System.Drawing.Size(224, 56);
+            this.pnlCombinacionSecreta.Size = new System.Drawing.Size(224, 75);
             this.pnlCombinacionSecreta.TabIndex = 5;
             // 
             // pnlJugadas
@@ -178,6 +178,7 @@ namespace NET_Mastermind {
             // pnlTesting
             // 
             this.pnlTesting.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnlTesting.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.pnlTesting.ColumnCount = 4;
             this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -187,7 +188,7 @@ namespace NET_Mastermind {
             this.pnlTesting.Name = "pnlTesting";
             this.pnlTesting.RowCount = 1;
             this.pnlTesting.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnlTesting.Size = new System.Drawing.Size(224, 56);
+            this.pnlTesting.Size = new System.Drawing.Size(200, 56);
             this.pnlTesting.TabIndex = 4;
             // 
             // pictureBox1
