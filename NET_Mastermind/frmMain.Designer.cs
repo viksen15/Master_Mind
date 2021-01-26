@@ -161,16 +161,17 @@ namespace NET_Mastermind {
             // 
             // pnlJugadas
             // 
-            this.pnlJugadas.ColumnCount = 4;
-            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlJugadas.ColumnCount = 5;
+            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.pnlJugadas.Location = new System.Drawing.Point(12, 43);
             this.pnlJugadas.Name = "pnlJugadas";
             this.pnlJugadas.RowCount = 1;
             this.pnlJugadas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnlJugadas.Size = new System.Drawing.Size(224, 56);
+            this.pnlJugadas.Size = new System.Drawing.Size(250, 56);
             this.pnlJugadas.TabIndex = 3;
             // 
             // pnIntentos
@@ -180,7 +181,7 @@ namespace NET_Mastermind {
             this.pnIntentos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.pnIntentos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.pnIntentos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnIntentos.Location = new System.Drawing.Point(275, 43);
+            this.pnIntentos.Location = new System.Drawing.Point(373, 43);
             this.pnIntentos.Name = "pnIntentos";
             this.pnIntentos.RowCount = 1;
             this.pnIntentos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -189,9 +190,9 @@ namespace NET_Mastermind {
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(204, 302);
+            this.pictureBox1.Location = new System.Drawing.Point(641, 255);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 66);
+            this.pictureBox1.Size = new System.Drawing.Size(224, 12);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 

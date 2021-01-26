@@ -16,6 +16,8 @@ namespace NET_Mastermind {
             Color.Red, Color.Blue, Color.Green, Color.Yellow
         };
 
+        private Color[] solucion;
+
         private Color colorSeleccionado;
 
         private int intento;
@@ -32,36 +34,48 @@ namespace NET_Mastermind {
             intento = 0;
 
             colorSeleccionado = coloresDisponibles[0];
+            solucion = new Color[4];
 
             NuevaJugada();
         }
         private void LlenarColoresDisponibles() {
             for (int i = 0; i < coloresDisponibles.Length; i++) {
-                PictureBox pb = new PictureBox();
-
-                pb.BackColor = coloresDisponibles[i];
+                PictureBox pb = new PictureBox() {
+                    BackColor = coloresDisponibles[i]
+                };
 
                 pnlColoresDisponibles.Controls.Add(pb);
             }
         }
         private void LlenarSolucion() {
             for (int i = 0; i < coloresDisponibles.Length; i++) {
-                PictureBox pb = new PictureBox();
-
-                pb.BackColor = coloresDisponibles[rnd.Next(coloresDisponibles.Length)];
+                PictureBox pb = new PictureBox() {
+                    BackColor = coloresDisponibles[rnd.Next(coloresDisponibles.Length)]
+                };
 
                 pnlCombinacionSecreta.Controls.Add(pb);
+
+                solucion[i] = coloresDisponibles[rnd.Next(coloresDisponibles.Length)];
             }
         }
         private void NuevaJugada() {
             for (int i = 0; i < coloresDisponibles.Length; i++) {
-                PictureBox pb = new PictureBox();
+                PictureBox pb = new PictureBox() {
+                    BackColor = Color.White,
+                };
 
-                pb.BackColor = Color.White;
                 pb.Click += BotonJugadaClick;
 
-                pnlJugadas.Controls.Add(pb);
+                pnlJugadas.Controls.Add(pb, i, intento);
             }
+
+            Button btnTest = new Button() {
+                Image = Properties.Resources.visto,
+                Size = new Size(44, 50),
+                BackColor = Color.White
+            };
+
+            pnlJugadas.Controls.Add(btnTest);
         }
         private void CambiarColorSeleccionado(object sender, MouseEventArgs e) {
             int posicionActiva = Array.IndexOf(coloresDisponibles, colorSeleccionado);
@@ -82,7 +96,7 @@ namespace NET_Mastermind {
                 }
             }
 
-            // pictureBox1.BackColor = colorSeleccionado;
+            pictureBox1.BackColor = colorSeleccionado;
         }
         private void BotonJugadaClick(object sender, System.EventArgs e) {
             PictureBox p = (PictureBox)sender;
