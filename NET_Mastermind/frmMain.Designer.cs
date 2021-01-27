@@ -162,11 +162,9 @@ namespace NET_Mastermind {
             this.pnlCombinacionSecreta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.pnlCombinacionSecreta.Size = new System.Drawing.Size(224, 75);
             this.pnlCombinacionSecreta.TabIndex = 5;
-            this.pnlCombinacionSecreta.Visible = false;
             // 
             // pnlJugadas
             // 
-            this.pnlJugadas.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.pnlJugadas.ColumnCount = 5;
             this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -183,7 +181,6 @@ namespace NET_Mastermind {
             // pnlTesting
             // 
             this.pnlTesting.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnlTesting.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.pnlTesting.ColumnCount = 4;
             this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));

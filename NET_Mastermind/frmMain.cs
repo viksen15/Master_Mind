@@ -70,8 +70,6 @@ namespace NET_Mastermind {
                     Name = "colordisp"
                 };
                 pb.Click += BotonJugadaClick;
-                pb.MouseEnter += MarcarColorSeleccionado;
-                pb.MouseLeave += QuitarColorSeleccionado;
 
                 pnlJugadas.Controls.Add(pb, i, intento);
             }
@@ -84,16 +82,6 @@ namespace NET_Mastermind {
             btnTest.Click += BotonComprobarClick;
 
             pnlJugadas.Controls.Add(btnTest, coloresDisponibles.Length, intento);
-        }
-
-        private void QuitarColorSeleccionado(object sender, EventArgs e) {
-            PictureBox p = (PictureBox)sender;
-            p.BackColor = Color.White;
-        }
-
-        private void MarcarColorSeleccionado(object sender, EventArgs e) {
-            PictureBox p = (PictureBox)sender;
-            p.BackColor = colorSeleccionado;
         }
 
         private void CambiarColorSeleccionado(object sender, MouseEventArgs e) {
@@ -119,7 +107,11 @@ namespace NET_Mastermind {
         }
         private void BotonJugadaClick(object sender, EventArgs e) {
             PictureBox p = (PictureBox)sender;
-            p.BackColor = colorSeleccionado;
+            if (p.BackColor == Color.White) {
+                p.BackColor = colorSeleccionado;
+            } else {
+                p.BackColor = Color.White;
+            }            
         }
         private void BotonComprobarClick(object sender, EventArgs e) {
             Color[] jugada = new Color[4];
@@ -129,12 +121,12 @@ namespace NET_Mastermind {
                 if (c is PictureBox) jugada[i] = c.BackColor;
             }
 
-            ComprobarNegras(jugada);
             ComprobarBlancas(jugada);
+            ComprobarNegras(jugada);
 
             if (jugada == solucion) {
                 MessageBox.Show("Has acertado la combinación.");
-            } else if (intento == 10) {
+            } else if (intento == nivel.Intentos) {
                 MessageBox.Show("Has agotado todos los intentos.");
             } else {
                 pnlJugadas.Controls.Remove((Button)sender);
@@ -155,18 +147,22 @@ namespace NET_Mastermind {
             }
         }
         private void ComprobarNegras(Color[] jugada) {
+            int numNegrasColocadas = 0;
+
             for (int i = 0; i < jugada.Length; i++) {
                 if (jugada[i] == solucion[i]) {
                     PictureBox pb = new PictureBox() {
                         BackColor = Color.Black,
                     };
-
-                    pnlTesting.Controls.Add(pb, i, intento);
+                    
+                    pnlTesting.Controls.Add(pb, 0, intento);
+                    numNegrasColocadas++;
                 }
             }
         }
         private void ComprobarBlancas(Color[] jugada) {
             Color[] BlancasColocadas = new Color[4];
+            int numBlancasColocadas = 0;
 
             for (int i = 0; i < jugada.Length; i++) {
                 Color c = jugada[i];
@@ -177,7 +173,8 @@ namespace NET_Mastermind {
                             BackColor = Color.White,
                         };
 
-                        pnlTesting.Controls.Add(pb, i, intento);
+                        pnlTesting.Controls.Add(pb, 0, intento);
+                        numBlancasColocadas++;
 
                         BlancasColocadas[i] = c;
                     }
