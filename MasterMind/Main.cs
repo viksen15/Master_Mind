@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace MasterMind
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         public Color[] colores = new[] { Color.Red, Color.Blue, Color.Yellow, Color.Green, Color.Pink, Color.Brown };
 
@@ -16,6 +16,7 @@ namespace MasterMind
         private int cantidadColores;
         private Combinacion combinacionActual;
         private Combinacion combinacionSecreta;
+        private Dificultad dificultad = Dificultad.Facil;
 
         private enum Dificultad
         {
@@ -24,10 +25,49 @@ namespace MasterMind
             Dificil
         }
 
-        public Form1()
+        public Main()
         {
             InitializeComponent();
-            IniciarJuego(Dificultad.Dificil);
+            dificultadMenuFacil.Click += Dificultad_Changed;
+            dificultadMenuMediana.Click += Dificultad_Changed;
+            dificultadMenuDificil.Click += Dificultad_Changed;
+            comenzarMenu.Click += ComenzarMenu_Click;
+            cancelarPartidaMenu.Click += CancelarPartidaMenu_Click;
+        }
+
+        private void CancelarPartidaMenu_Click(object sender, EventArgs e)
+        {
+            AcabarPartida();
+        }
+
+        private void ComenzarMenu_Click(object sender, EventArgs e)
+        {
+            IniciarJuego(dificultad);
+        }
+
+        private void Dificultad_Changed(object sender, EventArgs e)
+        {
+            if (sender == dificultadMenuFacil)
+            {
+                dificultadMenuFacil.CheckState = CheckState.Checked;
+                dificultadMenuMediana.CheckState = CheckState.Unchecked;
+                dificultadMenuDificil.CheckState = CheckState.Unchecked;
+                dificultad = Dificultad.Facil;
+            }
+            else if (sender == dificultadMenuMediana)
+            {
+                dificultadMenuFacil.CheckState = CheckState.Unchecked;
+                dificultadMenuMediana.CheckState = CheckState.Checked;
+                dificultadMenuDificil.CheckState = CheckState.Unchecked;
+                dificultad = Dificultad.Media;
+            }
+            else if (sender == dificultadMenuDificil)
+            {
+                dificultadMenuFacil.CheckState = CheckState.Unchecked;
+                dificultadMenuMediana.CheckState = CheckState.Unchecked;
+                dificultadMenuDificil.CheckState = CheckState.Checked;
+                dificultad = Dificultad.Dificil;
+            }
         }
 
         private void IniciarJuego(Dificultad dificultad)
@@ -35,6 +75,13 @@ namespace MasterMind
             // Limpiar controles
             coloresDisponibles.Controls.Clear();
             coloresSecretos.Controls.Clear();
+            combinacionesProbadas.Controls.Clear();
+            resultados.Controls.Clear();
+
+            comenzarMenu.Enabled = false;
+            cancelarPartidaMenu.Enabled = true;
+            dificultadMenu.Enabled = false;
+            btnProbar.Enabled = true;
 
 
             if (dificultad == Dificultad.Facil)
@@ -73,15 +120,18 @@ namespace MasterMind
             var combinacionProbada = combinacionActual.ObtenerYBloquear();
             var resultado = game.ProbarCombinacion(combinacionProbada);
 
-            var resultadoTransformado = resultado.Select(i => i switch
-            {
-                'I' => 0,
-                '?' => 1,
-                'C' => 2,
-                _ => 0,
-            });
+            var resultadoTransformado = resultado
+                .Select(caracter => caracter switch
+                {
+                    '?' => 0,
+                    'C' => 1,
+                    'I' => 2,
+                    _ => 2,
+                })
+                .Where(num => num < 2)
+                .OrderByDescending(num => num);
 
-            var a = new Combinacion(new[] { Color.White, Color.Gray, Color.Black }, resultadoTransformado);
+            var a = new Combinacion(new[] { Color.White, Color.Black }, resultadoTransformado);
             resultados.Controls.Add(a);
 
             if (resultado.All(x => x == 'C'))
@@ -104,8 +154,11 @@ namespace MasterMind
 
         private void AcabarPartida()
         {
-            button1.Enabled = false;
+            btnProbar.Enabled = false;
             combinacionSecreta.Visible = true;
+            comenzarMenu.Enabled = true;
+            cancelarPartidaMenu.Enabled = false;
+            dificultadMenu.Enabled = true;
         }
     }
 }

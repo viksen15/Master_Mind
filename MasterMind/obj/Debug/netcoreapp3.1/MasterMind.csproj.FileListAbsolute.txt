@@ -27,7 +27,6 @@ C:\Proyectos-Weixin\Master_Mind\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.Li
 C:\Proyectos-Weixin\Master_Mind\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.Library.pdb
 C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.csprojAssemblyReference.cache
 C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.Combinacion.resources
-C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.Form1.resources
 C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.csproj.GenerateResource.cache
 C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.AssemblyInfoInputs.cache
 C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.AssemblyInfo.cs
@@ -36,3 +35,4 @@ C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.cs
 C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.dll
 C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.pdb
 C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.genruntimeconfig.cache
+C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.Main.resources

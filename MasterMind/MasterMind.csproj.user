@@ -4,7 +4,7 @@
     <Compile Update="Combinacion.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Form1.cs">
+    <Compile Update="Main.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

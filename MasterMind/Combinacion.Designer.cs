@@ -46,6 +46,7 @@ namespace MasterMind
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Red;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -56,6 +57,7 @@ namespace MasterMind
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Red;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Location = new System.Drawing.Point(22, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
@@ -66,6 +68,7 @@ namespace MasterMind
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Red;
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox3.Location = new System.Drawing.Point(44, 0);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
@@ -76,6 +79,7 @@ namespace MasterMind
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Red;
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox4.Location = new System.Drawing.Point(66, 0);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
@@ -86,6 +90,7 @@ namespace MasterMind
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Red;
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox5.Location = new System.Drawing.Point(88, 0);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
@@ -96,6 +101,7 @@ namespace MasterMind
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Red;
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox6.Location = new System.Drawing.Point(110, 0);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
