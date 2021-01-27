@@ -27,13 +27,15 @@ namespace NET_Mastermind {
             NuevaPartida();
         }
         private void NuevaPartida() {
+            if (nivel is null) CambiarNivel();
+            
             LlenarColoresDisponibles();
             LlenarSolucion();
 
             intento = 0;
 
             colorSeleccionado = coloresDisponibles[0];
-            //pictureBox1.BackColor = colorSeleccionado;
+            pictureBox1.BackColor = colorSeleccionado;
 
             NuevaJugada();
         }
@@ -113,7 +115,7 @@ namespace NET_Mastermind {
                 }
             }
 
-            //pictureBox1.BackColor = colorSeleccionado;
+            pictureBox1.BackColor = colorSeleccionado;
         }
         private void BotonJugadaClick(object sender, EventArgs e) {
             PictureBox p = (PictureBox)sender;
@@ -188,6 +190,10 @@ namespace NET_Mastermind {
         }
 
         private void nivelToolStripMenuItem_Click(object sender, EventArgs e) {
+            CambiarNivel();
+        }
+
+        private void CambiarNivel() {
             frmSelectorNivel f = new frmSelectorNivel();
 
             DialogResult dr = f.ShowDialog();

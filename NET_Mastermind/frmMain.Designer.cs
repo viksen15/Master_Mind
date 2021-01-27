@@ -39,9 +39,12 @@ namespace NET_Mastermind {
             this.pnlJugadas = new System.Windows.Forms.TableLayoutPanel();
             this.pnlTesting = new System.Windows.Forms.TableLayoutPanel();
             this.lblNivel = new System.Windows.Forms.Label();
+            this.lblColor = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mnuApp.SuspendLayout();
             this.gbColoresDisponibles.SuspendLayout();
             this.gbSolucion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuApp
@@ -202,11 +205,30 @@ namespace NET_Mastermind {
             this.lblNivel.TabIndex = 5;
             this.lblNivel.Text = "Nivel seleccionado: ";
             // 
+            // lblColor
+            // 
+            this.lblColor.AutoSize = true;
+            this.lblColor.Location = new System.Drawing.Point(638, 426);
+            this.lblColor.Name = "lblColor";
+            this.lblColor.Size = new System.Drawing.Size(103, 13);
+            this.lblColor.TabIndex = 6;
+            this.lblColor.Text = "Color seleccionado: ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(742, 427);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(14, 13);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(883, 481);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblColor);
             this.Controls.Add(this.lblNivel);
             this.Controls.Add(this.pnlTesting);
             this.Controls.Add(this.pnlJugadas);
@@ -221,6 +243,7 @@ namespace NET_Mastermind {
             this.mnuApp.PerformLayout();
             this.gbColoresDisponibles.ResumeLayout(false);
             this.gbSolucion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,6 +266,8 @@ namespace NET_Mastermind {
         private System.Windows.Forms.TableLayoutPanel pnlColoresDisponibles;
         private System.Windows.Forms.TableLayoutPanel pnlCombinacionSecreta;
         private System.Windows.Forms.Label lblNivel;
+        private System.Windows.Forms.Label lblColor;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
