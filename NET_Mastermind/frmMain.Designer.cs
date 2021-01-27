@@ -38,11 +38,10 @@ namespace NET_Mastermind {
             this.pnlCombinacionSecreta = new System.Windows.Forms.TableLayoutPanel();
             this.pnlJugadas = new System.Windows.Forms.TableLayoutPanel();
             this.pnlTesting = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblNivel = new System.Windows.Forms.Label();
             this.mnuApp.SuspendLayout();
             this.gbColoresDisponibles.SuspendLayout();
             this.gbSolucion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuApp
@@ -78,12 +77,14 @@ namespace NET_Mastermind {
             this.nivelToolStripMenuItem.Name = "nivelToolStripMenuItem";
             this.nivelToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.nivelToolStripMenuItem.Text = "Nivel";
+            this.nivelToolStripMenuItem.Click += new System.EventHandler(this.nivelToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -158,6 +159,7 @@ namespace NET_Mastermind {
             this.pnlCombinacionSecreta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.pnlCombinacionSecreta.Size = new System.Drawing.Size(224, 75);
             this.pnlCombinacionSecreta.TabIndex = 5;
+            this.pnlCombinacionSecreta.Visible = false;
             // 
             // pnlJugadas
             // 
@@ -191,20 +193,21 @@ namespace NET_Mastermind {
             this.pnlTesting.Size = new System.Drawing.Size(200, 56);
             this.pnlTesting.TabIndex = 4;
             // 
-            // pictureBox1
+            // lblNivel
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(641, 255);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(224, 12);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.lblNivel.AutoSize = true;
+            this.lblNivel.Location = new System.Drawing.Point(638, 459);
+            this.lblNivel.Name = "lblNivel";
+            this.lblNivel.Size = new System.Drawing.Size(103, 13);
+            this.lblNivel.TabIndex = 5;
+            this.lblNivel.Text = "Nivel seleccionado: ";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(883, 481);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblNivel);
             this.Controls.Add(this.pnlTesting);
             this.Controls.Add(this.pnlJugadas);
             this.Controls.Add(this.gbSolucion);
@@ -212,12 +215,12 @@ namespace NET_Mastermind {
             this.Controls.Add(this.mnuApp);
             this.MainMenuStrip = this.mnuApp;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mastermind .NET";
             this.mnuApp.ResumeLayout(false);
             this.mnuApp.PerformLayout();
             this.gbColoresDisponibles.ResumeLayout(false);
             this.gbSolucion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,7 +242,7 @@ namespace NET_Mastermind {
         private System.Windows.Forms.TableLayoutPanel pnlTesting;
         private System.Windows.Forms.TableLayoutPanel pnlColoresDisponibles;
         private System.Windows.Forms.TableLayoutPanel pnlCombinacionSecreta;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblNivel;
     }
 }
 

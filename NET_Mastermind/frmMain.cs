@@ -12,12 +12,12 @@ namespace NET_Mastermind {
     public partial class frmMain : Form {
         private Random rnd = new Random();
 
-        private Color[] coloresDisponibles = {
-            Color.Red, Color.Blue, Color.Green, Color.Yellow
-        };
+        private Color[] coloresDisponibles = { Color.Red, Color.Blue, Color.Green, Color.Yellow };
 
         private Color[] solucion;
         private Color colorSeleccionado;
+
+        private Nivel nivel;
 
         private int intento;
         public frmMain() {
@@ -33,7 +33,7 @@ namespace NET_Mastermind {
             intento = 0;
 
             colorSeleccionado = coloresDisponibles[0];
-            pictureBox1.BackColor = colorSeleccionado;
+            //pictureBox1.BackColor = colorSeleccionado;
 
             NuevaJugada();
         }
@@ -68,6 +68,8 @@ namespace NET_Mastermind {
                     Name = "colordisp"
                 };
                 pb.Click += BotonJugadaClick;
+                pb.MouseEnter += MarcarColorSeleccionado;
+                pb.MouseLeave += QuitarColorSeleccionado;
 
                 pnlJugadas.Controls.Add(pb, i, intento);
             }
@@ -81,6 +83,17 @@ namespace NET_Mastermind {
 
             pnlJugadas.Controls.Add(btnTest, coloresDisponibles.Length, intento);
         }
+
+        private void QuitarColorSeleccionado(object sender, EventArgs e) {
+            PictureBox p = (PictureBox)sender;
+            p.BackColor = Color.White;
+        }
+
+        private void MarcarColorSeleccionado(object sender, EventArgs e) {
+            PictureBox p = (PictureBox)sender;
+            p.BackColor = colorSeleccionado;
+        }
+
         private void CambiarColorSeleccionado(object sender, MouseEventArgs e) {
             int posicionActiva = Array.IndexOf(coloresDisponibles, colorSeleccionado);
 
@@ -100,7 +113,7 @@ namespace NET_Mastermind {
                 }
             }
 
-            pictureBox1.BackColor = colorSeleccionado;
+            //pictureBox1.BackColor = colorSeleccionado;
         }
         private void BotonJugadaClick(object sender, EventArgs e) {
             PictureBox p = (PictureBox)sender;
@@ -168,6 +181,22 @@ namespace NET_Mastermind {
                     }
                 }
             }
+        }
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
+            Close();
+        }
+
+        private void nivelToolStripMenuItem_Click(object sender, EventArgs e) {
+            frmSelectorNivel f = new frmSelectorNivel();
+
+            DialogResult dr = f.ShowDialog();
+
+            if (dr == DialogResult.OK) {
+                nivel = f.NivelSeleccionado;
+            }
+
+            lblNivel.Text = "Nivel seleccionado: " + nivel.Nombre;
         }
     }
 }

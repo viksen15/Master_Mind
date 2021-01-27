@@ -18,3 +18,4 @@ C:\Users\Iago\source\repos\igc88\Master_Mind\NET_Mastermind\obj\Debug\NET_Master
 C:\Users\Iago\source\repos\igc88\Master_Mind\NET_Mastermind\obj\Debug\NET_Mastermind.csproj.CoreCompileInputs.cache
 C:\Users\Iago\source\repos\igc88\Master_Mind\NET_Mastermind\obj\Debug\NET_Mastermind.exe
 C:\Users\Iago\source\repos\igc88\Master_Mind\NET_Mastermind\obj\Debug\NET_Mastermind.pdb
+C:\Users\Iago\source\repos\igc88\Master_Mind\NET_Mastermind\obj\Debug\NET_Mastermind.frmSelectorNivel.resources
