@@ -165,11 +165,7 @@ namespace NET_Mastermind {
             // 
             // pnlJugadas
             // 
-            this.pnlJugadas.ColumnCount = 5;
-            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.pnlJugadas.ColumnCount = 1;
             this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.pnlJugadas.Location = new System.Drawing.Point(12, 43);
             this.pnlJugadas.Name = "pnlJugadas";
@@ -181,6 +177,7 @@ namespace NET_Mastermind {
             // pnlTesting
             // 
             this.pnlTesting.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnlTesting.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.pnlTesting.ColumnCount = 4;
             this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));

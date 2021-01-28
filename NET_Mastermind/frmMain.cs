@@ -28,7 +28,7 @@ namespace NET_Mastermind {
         }
         private void NuevaPartida() {
             if (nivel is null) CambiarNivel();
-            
+
             LlenarColoresDisponibles();
             LlenarSolucion();
 
@@ -64,7 +64,7 @@ namespace NET_Mastermind {
             }
         }
         private void NuevaJugada() {
-            for (int i = 0; i < coloresDisponibles.Length; i++) {
+            for (int i = 0; i < nivel.NumColores; i++) {
                 PictureBox pb = new PictureBox() {
                     BackColor = Color.White,
                     Name = "colordisp"
@@ -81,9 +81,9 @@ namespace NET_Mastermind {
             };
             btnTest.Click += BotonComprobarClick;
 
-            pnlJugadas.Controls.Add(btnTest, coloresDisponibles.Length, intento);
+            //pnlJugadas.Controls.Add(btnTest, coloresDisponibles.Length, intento);
+            pnlJugadas.Controls.Add(btnTest);
         }
-
         private void CambiarColorSeleccionado(object sender, MouseEventArgs e) {
             int posicionActiva = Array.IndexOf(coloresDisponibles, colorSeleccionado);
 
@@ -111,7 +111,7 @@ namespace NET_Mastermind {
                 p.BackColor = colorSeleccionado;
             } else {
                 p.BackColor = Color.White;
-            }            
+            }
         }
         private void BotonComprobarClick(object sender, EventArgs e) {
             Color[] jugada = new Color[4];
@@ -131,21 +131,21 @@ namespace NET_Mastermind {
             } else {
                 pnlJugadas.Controls.Remove((Button)sender);
 
-                // Añadimos una fila al panel de jugadas
-                pnlJugadas.RowCount += 1;
-                pnlJugadas.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-                pnlJugadas.Size = new Size(pnlJugadas.Size.Width, pnlJugadas.Size.Height + 56);
-
-                // Añadimos una fila al panel de testing
-                pnlTesting.RowCount += 1;
-                pnlTesting.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-                pnlTesting.Size = new Size(pnlTesting.Size.Width, pnlTesting.Size.Height + 56);
+                AddFilaPanel(ref pnlJugadas);
+                AddFilaPanel(ref pnlTesting);
 
                 intento += 1;
 
                 NuevaJugada();
             }
         }
+
+        private void AddFilaPanel(ref TableLayoutPanel panel) {
+            panel.RowCount += 1;
+            panel.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            panel.Size = new Size(panel.Size.Width, panel.Size.Height + 56);
+        }
+
         private void ComprobarNegras(Color[] jugada) {
             int numNegrasColocadas = 0;
 
@@ -154,7 +154,7 @@ namespace NET_Mastermind {
                     PictureBox pb = new PictureBox() {
                         BackColor = Color.Black,
                     };
-                    
+
                     pnlTesting.Controls.Add(pb, 0, intento);
                     numNegrasColocadas++;
                 }
@@ -200,6 +200,16 @@ namespace NET_Mastermind {
             }
 
             lblNivel.Text = "Nivel seleccionado: " + nivel.Nombre;
+
+            pnlJugadas.ColumnStyles.Clear();
+
+            // Sumamos 1 al número de colores correspondiente al botón de comprobación
+            pnlJugadas.ColumnCount = nivel.NumColores + 1;
+            pnlJugadas.Size = new Size(300, 56);
+            for (int i = 0; i < pnlJugadas.ColumnCount; i++) {
+                pnlJugadas.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50F));
+            }
         }
     }
 }
+
