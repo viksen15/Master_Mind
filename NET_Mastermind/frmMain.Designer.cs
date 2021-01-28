@@ -41,6 +41,7 @@ namespace NET_Mastermind {
             this.lblNivel = new System.Windows.Forms.Label();
             this.lblColor = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnMostrarSolucion = new System.Windows.Forms.Button();
             this.mnuApp.SuspendLayout();
             this.gbColoresDisponibles.SuspendLayout();
             this.gbSolucion.SuspendLayout();
@@ -159,11 +160,12 @@ namespace NET_Mastermind {
             this.pnlCombinacionSecreta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.pnlCombinacionSecreta.Size = new System.Drawing.Size(200, 75);
             this.pnlCombinacionSecreta.TabIndex = 5;
+            this.pnlCombinacionSecreta.Visible = false;
             // 
             // pnlJugadas
             // 
             this.pnlJugadas.ColumnCount = 1;
-            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
             this.pnlJugadas.Location = new System.Drawing.Point(12, 43);
             this.pnlJugadas.Name = "pnlJugadas";
             this.pnlJugadas.RowCount = 1;
@@ -174,9 +176,8 @@ namespace NET_Mastermind {
             // pnlTesting
             // 
             this.pnlTesting.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnlTesting.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.pnlTesting.ColumnCount = 1;
-            this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 199F));
             this.pnlTesting.Location = new System.Drawing.Point(419, 43);
             this.pnlTesting.Name = "pnlTesting";
             this.pnlTesting.RowCount = 1;
@@ -213,11 +214,22 @@ namespace NET_Mastermind {
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // btnMostrarSolucion
+            // 
+            this.btnMostrarSolucion.Location = new System.Drawing.Point(1109, 255);
+            this.btnMostrarSolucion.Name = "btnMostrarSolucion";
+            this.btnMostrarSolucion.Size = new System.Drawing.Size(80, 24);
+            this.btnMostrarSolucion.TabIndex = 8;
+            this.btnMostrarSolucion.Text = "Mostrar";
+            this.btnMostrarSolucion.UseVisualStyleBackColor = true;
+            this.btnMostrarSolucion.Click += new System.EventHandler(this.btnMostrarSolucion_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 481);
+            this.Controls.Add(this.btnMostrarSolucion);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblColor);
             this.Controls.Add(this.lblNivel);
@@ -259,6 +271,7 @@ namespace NET_Mastermind {
         private System.Windows.Forms.Label lblNivel;
         private System.Windows.Forms.Label lblColor;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnMostrarSolucion;
     }
 }
 

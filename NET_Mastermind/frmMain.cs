@@ -73,7 +73,7 @@ namespace NET_Mastermind {
                     BackColor = Color.White,
                     Name = "colordisp"
                 };
-                pb.Click += BotonJugadaClick;
+                pb.MouseClick += BotonJugadaClick;
 
                 pnlJugadas.Controls.Add(pb, i, intento);
             }
@@ -107,15 +107,11 @@ namespace NET_Mastermind {
                 }
             }
 
-            pictureBox1.BackColor = colorSeleccionado;
-        }
-        private void BotonJugadaClick(object sender, EventArgs e) {
             PictureBox p = (PictureBox)sender;
-            if (p.BackColor == Color.White) {
-                p.BackColor = colorSeleccionado;
-            } else {
-                p.BackColor = Color.White;
-            }
+            p.BackColor = colorSeleccionado;
+        }
+        private void BotonJugadaClick(object sender, MouseEventArgs e) {
+            CambiarColorSeleccionado(sender, e);
         }
         private void BotonComprobarClick(object sender, EventArgs e) {
             Color[] jugada = new Color[coloresDisponibles.Length];
@@ -126,6 +122,7 @@ namespace NET_Mastermind {
             }
 
             ComprobarBlancas(jugada);
+
             ComprobarNegras(jugada);
 
             if (jugada == solucion) {
@@ -157,13 +154,13 @@ namespace NET_Mastermind {
                         BackColor = Color.Black,
                     };
 
-                    pnlTesting.Controls.Add(pb, 0, intento);
+                    pnlTesting.Controls.Add(pb, numNegrasColocadas, intento);
                     numNegrasColocadas++;
                 }
             }
         }
         private void ComprobarBlancas(Color[] jugada) {
-            Color[] BlancasColocadas = new Color[4];
+            Color[] BlancasColocadas = new Color[nivel.NumColores];
             int numBlancasColocadas = 0;
 
             for (int i = 0; i < jugada.Length; i++) {
@@ -175,7 +172,7 @@ namespace NET_Mastermind {
                             BackColor = Color.White,
                         };
 
-                        pnlTesting.Controls.Add(pb, 0, intento);
+                        pnlTesting.Controls.Add(pb, numBlancasColocadas, intento);
                         numBlancasColocadas++;
 
                         BlancasColocadas[i] = c;
@@ -212,14 +209,16 @@ namespace NET_Mastermind {
             panel.ColumnStyles.Clear();
 
             panel.ColumnCount = boton ? nivel.NumColores + 1 : nivel.NumColores;
-
+            
             panel.Size = new Size(50 * panel.ColumnCount, 56);
 
             for (int i = 0; i<panel.ColumnCount; i++) {
                 panel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50F));
             }
+        }
 
-
+        private void btnMostrarSolucion_Click(object sender, EventArgs e) {
+            pnlCombinacionSecreta.Visible = !pnlCombinacionSecreta.Visible;
         }
     }
 }
