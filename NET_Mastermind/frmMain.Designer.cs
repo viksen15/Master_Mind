@@ -54,7 +54,7 @@ namespace NET_Mastermind {
             this.ayudaToolStripMenuItem});
             this.mnuApp.Location = new System.Drawing.Point(0, 0);
             this.mnuApp.Name = "mnuApp";
-            this.mnuApp.Size = new System.Drawing.Size(883, 24);
+            this.mnuApp.Size = new System.Drawing.Size(1201, 24);
             this.mnuApp.TabIndex = 0;
             this.mnuApp.Text = "menuStrip1";
             // 
@@ -115,9 +115,9 @@ namespace NET_Mastermind {
             this.gbColoresDisponibles.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gbColoresDisponibles.Controls.Add(this.pnlColoresDisponibles);
             this.gbColoresDisponibles.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.gbColoresDisponibles.Location = new System.Drawing.Point(635, 43);
+            this.gbColoresDisponibles.Location = new System.Drawing.Point(829, 43);
             this.gbColoresDisponibles.Name = "gbColoresDisponibles";
-            this.gbColoresDisponibles.Size = new System.Drawing.Size(236, 100);
+            this.gbColoresDisponibles.Size = new System.Drawing.Size(360, 100);
             this.gbColoresDisponibles.TabIndex = 1;
             this.gbColoresDisponibles.TabStop = false;
             this.gbColoresDisponibles.Text = "Colores disponibles";
@@ -133,7 +133,7 @@ namespace NET_Mastermind {
             this.pnlColoresDisponibles.Name = "pnlColoresDisponibles";
             this.pnlColoresDisponibles.RowCount = 1;
             this.pnlColoresDisponibles.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnlColoresDisponibles.Size = new System.Drawing.Size(224, 75);
+            this.pnlColoresDisponibles.Size = new System.Drawing.Size(200, 75);
             this.pnlColoresDisponibles.TabIndex = 5;
             this.pnlColoresDisponibles.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CambiarColorSeleccionado);
             // 
@@ -142,31 +142,28 @@ namespace NET_Mastermind {
             this.gbSolucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gbSolucion.Controls.Add(this.pnlCombinacionSecreta);
             this.gbSolucion.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.gbSolucion.Location = new System.Drawing.Point(635, 149);
+            this.gbSolucion.Location = new System.Drawing.Point(829, 149);
             this.gbSolucion.Name = "gbSolucion";
-            this.gbSolucion.Size = new System.Drawing.Size(236, 100);
+            this.gbSolucion.Size = new System.Drawing.Size(360, 100);
             this.gbSolucion.TabIndex = 2;
             this.gbSolucion.TabStop = false;
             this.gbSolucion.Text = "Combinación secreta";
             // 
             // pnlCombinacionSecreta
             // 
-            this.pnlCombinacionSecreta.ColumnCount = 4;
-            this.pnlCombinacionSecreta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlCombinacionSecreta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlCombinacionSecreta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlCombinacionSecreta.ColumnCount = 1;
             this.pnlCombinacionSecreta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.pnlCombinacionSecreta.Location = new System.Drawing.Point(6, 19);
             this.pnlCombinacionSecreta.Name = "pnlCombinacionSecreta";
             this.pnlCombinacionSecreta.RowCount = 1;
             this.pnlCombinacionSecreta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnlCombinacionSecreta.Size = new System.Drawing.Size(224, 75);
+            this.pnlCombinacionSecreta.Size = new System.Drawing.Size(200, 75);
             this.pnlCombinacionSecreta.TabIndex = 5;
             // 
             // pnlJugadas
             // 
             this.pnlJugadas.ColumnCount = 1;
-            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.pnlJugadas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.pnlJugadas.Location = new System.Drawing.Point(12, 43);
             this.pnlJugadas.Name = "pnlJugadas";
             this.pnlJugadas.RowCount = 1;
@@ -178,12 +175,9 @@ namespace NET_Mastermind {
             // 
             this.pnlTesting.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlTesting.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.pnlTesting.ColumnCount = 4;
-            this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlTesting.Location = new System.Drawing.Point(373, 43);
+            this.pnlTesting.ColumnCount = 1;
+            this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.pnlTesting.Location = new System.Drawing.Point(419, 43);
             this.pnlTesting.Name = "pnlTesting";
             this.pnlTesting.RowCount = 1;
             this.pnlTesting.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -192,8 +186,9 @@ namespace NET_Mastermind {
             // 
             // lblNivel
             // 
+            this.lblNivel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNivel.AutoSize = true;
-            this.lblNivel.Location = new System.Drawing.Point(638, 459);
+            this.lblNivel.Location = new System.Drawing.Point(956, 458);
             this.lblNivel.Name = "lblNivel";
             this.lblNivel.Size = new System.Drawing.Size(103, 13);
             this.lblNivel.TabIndex = 5;
@@ -201,8 +196,9 @@ namespace NET_Mastermind {
             // 
             // lblColor
             // 
+            this.lblColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblColor.AutoSize = true;
-            this.lblColor.Location = new System.Drawing.Point(638, 426);
+            this.lblColor.Location = new System.Drawing.Point(956, 425);
             this.lblColor.Name = "lblColor";
             this.lblColor.Size = new System.Drawing.Size(103, 13);
             this.lblColor.TabIndex = 6;
@@ -210,7 +206,8 @@ namespace NET_Mastermind {
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(742, 427);
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Location = new System.Drawing.Point(1060, 426);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(14, 13);
             this.pictureBox1.TabIndex = 7;
@@ -220,7 +217,7 @@ namespace NET_Mastermind {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 481);
+            this.ClientSize = new System.Drawing.Size(1201, 481);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblColor);
             this.Controls.Add(this.lblNivel);

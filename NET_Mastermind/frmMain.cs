@@ -40,6 +40,8 @@ namespace NET_Mastermind {
             NuevaJugada();
         }
         private void LlenarColoresDisponibles() {
+            ActualizarPanel(ref pnlColoresDisponibles, false);
+
             for (int i = 0; i < coloresDisponibles.Length; i++) {
                 PictureBox pb = new PictureBox() {
                     BackColor = coloresDisponibles[i],
@@ -50,8 +52,10 @@ namespace NET_Mastermind {
             }
         }
         private void LlenarSolucion() {
-            solucion = new Color[4];
-            for (int i = 0; i < coloresDisponibles.Length; i++) {
+            ActualizarPanel(ref pnlCombinacionSecreta, false);
+
+            solucion = new Color[nivel.NumColores];
+            for (int i = 0; i < nivel.NumColores; i++) {
                 Color c = coloresDisponibles[rnd.Next(coloresDisponibles.Length)];
 
                 PictureBox pb = new PictureBox() {
@@ -114,7 +118,7 @@ namespace NET_Mastermind {
             }
         }
         private void BotonComprobarClick(object sender, EventArgs e) {
-            Color[] jugada = new Color[4];
+            Color[] jugada = new Color[coloresDisponibles.Length];
 
             for (int i = 0; i < coloresDisponibles.Length; i++) {
                 Control c = pnlJugadas.GetControlFromPosition(i, intento);
@@ -139,13 +143,11 @@ namespace NET_Mastermind {
                 NuevaJugada();
             }
         }
-
         private void AddFilaPanel(ref TableLayoutPanel panel) {
             panel.RowCount += 1;
             panel.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             panel.Size = new Size(panel.Size.Width, panel.Size.Height + 56);
         }
-
         private void ComprobarNegras(Color[] jugada) {
             int numNegrasColocadas = 0;
 
@@ -185,12 +187,11 @@ namespace NET_Mastermind {
             Application.Exit();
             Close();
         }
-
         private void nivelToolStripMenuItem_Click(object sender, EventArgs e) {
             CambiarNivel();
         }
-
         private void CambiarNivel() {
+            // Mostramos el formulario de selección de nivel
             frmSelectorNivel f = new frmSelectorNivel();
 
             DialogResult dr = f.ShowDialog();
@@ -199,17 +200,28 @@ namespace NET_Mastermind {
                 nivel = f.NivelSeleccionado;
             }
 
+            coloresDisponibles = nivel.ColoresDisponibles;
+
+            // Modificamos la label que indica el nivel
             lblNivel.Text = "Nivel seleccionado: " + nivel.Nombre;
 
-            pnlJugadas.ColumnStyles.Clear();
+            ActualizarPanel(ref pnlJugadas, true);
+            ActualizarPanel(ref pnlTesting, false);
+        }
+        private void ActualizarPanel(ref TableLayoutPanel panel, bool boton) {
+            panel.ColumnStyles.Clear();
 
-            // Sumamos 1 al número de colores correspondiente al botón de comprobación
-            pnlJugadas.ColumnCount = nivel.NumColores + 1;
-            pnlJugadas.Size = new Size(300, 56);
-            for (int i = 0; i < pnlJugadas.ColumnCount; i++) {
-                pnlJugadas.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50F));
+            panel.ColumnCount = boton ? nivel.NumColores + 1 : nivel.NumColores;
+
+            panel.Size = new Size(50 * panel.ColumnCount, 56);
+
+            for (int i = 0; i<panel.ColumnCount; i++) {
+                panel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50F));
             }
+
+
         }
     }
 }
+
 
