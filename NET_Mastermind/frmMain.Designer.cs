@@ -42,6 +42,7 @@ namespace NET_Mastermind {
             this.lblColor = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMostrarSolucion = new System.Windows.Forms.Button();
+            this.coloresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuApp.SuspendLayout();
             this.gbColoresDisponibles.SuspendLayout();
             this.gbSolucion.SuspendLayout();
@@ -64,7 +65,8 @@ namespace NET_Mastermind {
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoJuegoToolStripMenuItem,
             this.nivelToolStripMenuItem,
-            this.salirToolStripMenuItem});
+            this.salirToolStripMenuItem,
+            this.coloresToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
@@ -72,21 +74,21 @@ namespace NET_Mastermind {
             // nuevoJuegoToolStripMenuItem
             // 
             this.nuevoJuegoToolStripMenuItem.Name = "nuevoJuegoToolStripMenuItem";
-            this.nuevoJuegoToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.nuevoJuegoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoJuegoToolStripMenuItem.Text = "Nuevo juego";
             this.nuevoJuegoToolStripMenuItem.Click += new System.EventHandler(this.nuevoJuegoToolStripMenuItem_Click);
             // 
             // nivelToolStripMenuItem
             // 
             this.nivelToolStripMenuItem.Name = "nivelToolStripMenuItem";
-            this.nivelToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.nivelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nivelToolStripMenuItem.Text = "Nivel";
             this.nivelToolStripMenuItem.Click += new System.EventHandler(this.nivelToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -177,7 +179,7 @@ namespace NET_Mastermind {
             // 
             this.pnlTesting.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlTesting.ColumnCount = 1;
-            this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 199F));
+            this.pnlTesting.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.pnlTesting.Location = new System.Drawing.Point(419, 43);
             this.pnlTesting.Name = "pnlTesting";
             this.pnlTesting.RowCount = 1;
@@ -223,6 +225,13 @@ namespace NET_Mastermind {
             this.btnMostrarSolucion.Text = "Mostrar";
             this.btnMostrarSolucion.UseVisualStyleBackColor = true;
             this.btnMostrarSolucion.Click += new System.EventHandler(this.btnMostrarSolucion_Click);
+            // 
+            // coloresToolStripMenuItem
+            // 
+            this.coloresToolStripMenuItem.Name = "coloresToolStripMenuItem";
+            this.coloresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.coloresToolStripMenuItem.Text = "Colores";
+            this.coloresToolStripMenuItem.Click += new System.EventHandler(this.coloresToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -272,6 +281,7 @@ namespace NET_Mastermind {
         private System.Windows.Forms.Label lblColor;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnMostrarSolucion;
+        private System.Windows.Forms.ToolStripMenuItem coloresToolStripMenuItem;
     }
 }
 

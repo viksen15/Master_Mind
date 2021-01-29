@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Nivel.cs" />
+    <Compile Include="Forms\frmSelectorColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSelectorColor.Designer.cs">
+      <DependentUpon>frmSelectorColor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmSelectorNivel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmSelectorColor.resx">
+      <DependentUpon>frmSelectorColor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSelectorNivel.resx">
       <DependentUpon>frmSelectorNivel.cs</DependentUpon>
     </EmbeddedResource>

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace NET_Mastermind {
     public partial class frmMain : Form {
         private Random rnd = new Random();
@@ -29,7 +30,8 @@ namespace NET_Mastermind {
         private void NuevaPartida() {
             if (nivel is null) CambiarNivel();
 
-            LlenarColoresDisponibles();
+            nivelToolStripMenuItem.Enabled = false;
+            
             LlenarSolucion();
 
             intento = 0;
@@ -85,8 +87,7 @@ namespace NET_Mastermind {
             };
             btnTest.Click += BotonComprobarClick;
 
-            //pnlJugadas.Controls.Add(btnTest, coloresDisponibles.Length, intento);
-            pnlJugadas.Controls.Add(btnTest);
+            pnlJugadas.Controls.Add(btnTest, nivel.NumColores, intento);
         }
         private void CambiarColorSeleccionado(object sender, MouseEventArgs e) {
             int posicionActiva = Array.IndexOf(coloresDisponibles, colorSeleccionado);
@@ -117,21 +118,21 @@ namespace NET_Mastermind {
             Color[] jugada = new Color[nivel.NumColores];
             Color[] negras = new Color[nivel.NumColores];
 
-            int numNegrasColocadas = 0;
-
-            for (int i = 0; i < coloresDisponibles.Length; i++) {
+            for (int i = 0; i < nivel.NumColores; i++) {
                 Control c = pnlJugadas.GetControlFromPosition(i, intento);
-                if (c is PictureBox) jugada[i] = c.BackColor;
+
+                if (c is PictureBox) {
+                    jugada[i] = c.BackColor;
+                }
             }
 
-            ComprobarNegras(jugada, ref negras, ref numNegrasColocadas);
-            ComprobarBlancas(jugada, negras, numNegrasColocadas);
-
-            if (jugada == solucion) {
+            if (Enumerable.SequenceEqual(jugada, solucion)) {
                 MessageBox.Show("Has acertado la combinación.");
             } else if (intento == nivel.Intentos) {
                 MessageBox.Show("Has agotado todos los intentos.");
             } else {
+                ComprobarJugada(jugada);
+
                 pnlJugadas.Controls.Remove((Button)sender);
 
                 AddFilaPanel(ref pnlJugadas);
@@ -147,22 +148,20 @@ namespace NET_Mastermind {
             panel.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             panel.Size = new Size(panel.Size.Width, panel.Size.Height + 56);
         }
-        private void ComprobarNegras(Color[] jugada, ref Color[] negras, ref int numNegrasColocadas) {
+        private void ComprobarJugada(Color[] jugada) {
+            Color[] BlancasColocadas = new Color[nivel.NumColores];
+            int numFichasColocadas = 0;
+
             for (int i = 0; i < jugada.Length; i++) {
                 if (jugada[i] == solucion[i]) {
                     PictureBox pb = new PictureBox() {
                         BackColor = Color.Black,
                     };
 
-                    negras[numNegrasColocadas] = jugada[i];
-
-                    pnlTesting.Controls.Add(pb, numNegrasColocadas, intento);
-                    numNegrasColocadas++;
+                    pnlTesting.Controls.Add(pb, numFichasColocadas, intento);
+                    numFichasColocadas++;
                 }
-            }
-        }
-        private void ComprobarBlancas(Color[] jugada, Color[] BlancasColocadas, int inicio = 0) {
-            int numFichasColocadas = inicio;
+            }            
 
             for (int i = 0; i < jugada.Length; i++) {
                 Color c = jugada[i];
@@ -205,6 +204,8 @@ namespace NET_Mastermind {
 
             ActualizarPanel(ref pnlJugadas, true);
             ActualizarPanel(ref pnlTesting, false);
+
+            LlenarColoresDisponibles();
         }
         private void ActualizarPanel(ref TableLayoutPanel panel, bool boton) {
             panel.ColumnStyles.Clear();
@@ -217,9 +218,13 @@ namespace NET_Mastermind {
                 panel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50F));
             }
         }
-
         private void btnMostrarSolucion_Click(object sender, EventArgs e) {
             pnlCombinacionSecreta.Visible = !pnlCombinacionSecreta.Visible;
+        }
+
+        private void coloresToolStripMenuItem_Click(object sender, EventArgs e) {
+            frmSelectorColor f = new frmSelectorColor(coloresDisponibles);
+            f.Show();
         }
     }
 }
