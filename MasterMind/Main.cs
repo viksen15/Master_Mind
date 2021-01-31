@@ -33,6 +33,20 @@ namespace MasterMind
             dificultadMenuDificil.Click += Dificultad_Changed;
             comenzarMenu.Click += ComenzarMenu_Click;
             cancelarPartidaMenu.Click += CancelarPartidaMenu_Click;
+            comoJugarMenu.Click += ComoJugarMenu_Click;
+            acercaDeMenu.Click += AcercaDeMenu_Click;
+        }
+
+        private void AcercaDeMenu_Click(object sender, EventArgs e)
+        {
+            AcercaDe ad = new AcercaDe();
+            ad.ShowDialog();
+        }
+
+        private void ComoJugarMenu_Click(object sender, EventArgs e)
+        {
+            ComoJugar cj = new ComoJugar();
+            cj.ShowDialog();
         }
 
         private void CancelarPartidaMenu_Click(object sender, EventArgs e)

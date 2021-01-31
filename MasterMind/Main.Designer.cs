@@ -43,7 +43,7 @@ namespace MasterMind
             this.dificultadMenuMediana = new System.Windows.Forms.ToolStripMenuItem();
             this.dificultadMenuDificil = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelarPartidaMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -69,6 +69,8 @@ namespace MasterMind
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comoJugarMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,7 +129,7 @@ namespace MasterMind
             this.menuStrip1.BackColor = System.Drawing.Color.Fuchsia;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.partidaMenu,
-            this.toolStripMenuItem2});
+            this.ayudaMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(654, 24);
@@ -187,11 +189,14 @@ namespace MasterMind
             this.cancelarPartidaMenu.Size = new System.Drawing.Size(168, 22);
             this.cancelarPartidaMenu.Text = "Cancelar partida";
             // 
-            // toolStripMenuItem2
+            // ayudaMenu
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(53, 20);
-            this.toolStripMenuItem2.Text = "Ayuda";
+            this.ayudaMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.comoJugarMenu,
+            this.acercaDeMenu});
+            this.ayudaMenu.Name = "ayudaMenu";
+            this.ayudaMenu.Size = new System.Drawing.Size(53, 20);
+            this.ayudaMenu.Text = "Ayuda";
             // 
             // newToolStripMenuItem
             // 
@@ -362,6 +367,18 @@ namespace MasterMind
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
+            // comoJugarMenu
+            // 
+            this.comoJugarMenu.Name = "comoJugarMenu";
+            this.comoJugarMenu.Size = new System.Drawing.Size(137, 22);
+            this.comoJugarMenu.Text = "Como jugar";
+            // 
+            // acercaDeMenu
+            // 
+            this.acercaDeMenu.Name = "acercaDeMenu";
+            this.acercaDeMenu.Size = new System.Drawing.Size(137, 22);
+            this.acercaDeMenu.Text = "Acerca de";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -390,7 +407,7 @@ namespace MasterMind
         private System.Windows.Forms.FlowLayoutPanel combinacionesProbadas;
         private System.Windows.Forms.FlowLayoutPanel resultados;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem infoMenu;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
@@ -423,6 +440,9 @@ namespace MasterMind
         private System.Windows.Forms.ToolStripMenuItem partidaMenu;
         private System.Windows.Forms.ToolStripMenuItem comenzarMenu;
         private System.Windows.Forms.ToolStripMenuItem cancelarPartidaMenu;
+        private System.Windows.Forms.ToolStripMenuItem ayudaMenu;
+        private System.Windows.Forms.ToolStripMenuItem comoJugarMenu;
+        private System.Windows.Forms.ToolStripMenuItem acercaDeMenu;
     }
 }
 
