@@ -44,6 +44,8 @@ namespace MasterMind
             this.dificultadMenuDificil = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelarPartidaMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.comoJugarMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -69,8 +71,7 @@ namespace MasterMind
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comoJugarMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.acercaDeMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.elegirColorMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,6 +142,7 @@ namespace MasterMind
             this.partidaMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.comenzarMenu,
             this.dificultadMenu,
+            this.elegirColorMenu,
             this.cancelarPartidaMenu});
             this.partidaMenu.Name = "partidaMenu";
             this.partidaMenu.Size = new System.Drawing.Size(56, 20);
@@ -197,6 +199,18 @@ namespace MasterMind
             this.ayudaMenu.Name = "ayudaMenu";
             this.ayudaMenu.Size = new System.Drawing.Size(53, 20);
             this.ayudaMenu.Text = "Ayuda";
+            // 
+            // comoJugarMenu
+            // 
+            this.comoJugarMenu.Name = "comoJugarMenu";
+            this.comoJugarMenu.Size = new System.Drawing.Size(137, 22);
+            this.comoJugarMenu.Text = "Como jugar";
+            // 
+            // acercaDeMenu
+            // 
+            this.acercaDeMenu.Name = "acercaDeMenu";
+            this.acercaDeMenu.Size = new System.Drawing.Size(137, 22);
+            this.acercaDeMenu.Text = "Acerca de";
             // 
             // newToolStripMenuItem
             // 
@@ -367,17 +381,11 @@ namespace MasterMind
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
-            // comoJugarMenu
+            // elegirColorMenu
             // 
-            this.comoJugarMenu.Name = "comoJugarMenu";
-            this.comoJugarMenu.Size = new System.Drawing.Size(137, 22);
-            this.comoJugarMenu.Text = "Como jugar";
-            // 
-            // acercaDeMenu
-            // 
-            this.acercaDeMenu.Name = "acercaDeMenu";
-            this.acercaDeMenu.Size = new System.Drawing.Size(137, 22);
-            this.acercaDeMenu.Text = "Acerca de";
+            this.elegirColorMenu.Name = "elegirColorMenu";
+            this.elegirColorMenu.Size = new System.Drawing.Size(168, 22);
+            this.elegirColorMenu.Text = "elegirColor";
             // 
             // Main
             // 
@@ -443,6 +451,7 @@ namespace MasterMind
         private System.Windows.Forms.ToolStripMenuItem ayudaMenu;
         private System.Windows.Forms.ToolStripMenuItem comoJugarMenu;
         private System.Windows.Forms.ToolStripMenuItem acercaDeMenu;
+        private System.Windows.Forms.ToolStripMenuItem elegirColorMenu;
     }
 }
 

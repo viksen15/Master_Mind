@@ -38,3 +38,4 @@ C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.ge
 C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.Main.resources
 C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.ComoJugar.resources
 C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.AcercaDe.resources
+C:\Proyectos-Weixin\Master_Mind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.SeleccionarColores.resources

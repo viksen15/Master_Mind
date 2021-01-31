@@ -13,10 +13,11 @@ namespace MasterMind
 
         Game game;
         private int intentos;
-        private int cantidadColores;
+        public int cantidadColores { get; private set; } = 0;
         private Combinacion combinacionActual;
         private Combinacion combinacionSecreta;
         private Dificultad dificultad = Dificultad.Facil;
+        private bool juegoEmpezadoUnaVez = false;
 
         private enum Dificultad
         {
@@ -32,31 +33,24 @@ namespace MasterMind
             dificultadMenuMediana.Click += Dificultad_Changed;
             dificultadMenuDificil.Click += Dificultad_Changed;
             comenzarMenu.Click += ComenzarMenu_Click;
+            elegirColorMenu.Click += ElegirColorMenu_Click;
             cancelarPartidaMenu.Click += CancelarPartidaMenu_Click;
             comoJugarMenu.Click += ComoJugarMenu_Click;
             acercaDeMenu.Click += AcercaDeMenu_Click;
         }
 
-        private void AcercaDeMenu_Click(object sender, EventArgs e)
+        private void ElegirColorMenu_Click(object sender, EventArgs e)
         {
-            AcercaDe ad = new AcercaDe();
-            ad.ShowDialog();
-        }
-
-        private void ComoJugarMenu_Click(object sender, EventArgs e)
-        {
-            ComoJugar cj = new ComoJugar();
-            cj.ShowDialog();
-        }
-
-        private void CancelarPartidaMenu_Click(object sender, EventArgs e)
-        {
-            AcabarPartida();
-        }
-
-        private void ComenzarMenu_Click(object sender, EventArgs e)
-        {
-            IniciarJuego(dificultad);
+            //hay que estar iniciada la partida
+            if (juegoEmpezadoUnaVez)
+            {
+                SeleccionarColores sc = new SeleccionarColores(this);
+                sc.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("juego al menos una partida");
+            }
         }
 
         private void Dificultad_Changed(object sender, EventArgs e)
@@ -84,7 +78,7 @@ namespace MasterMind
             }
         }
 
-        private void IniciarJuego(Dificultad dificultad)
+        public void IniciarJuego()
         {
             // Limpiar controles
             coloresDisponibles.Controls.Clear();
@@ -92,11 +86,11 @@ namespace MasterMind
             combinacionesProbadas.Controls.Clear();
             resultados.Controls.Clear();
 
+            //Preparar botones
             comenzarMenu.Enabled = false;
             cancelarPartidaMenu.Enabled = true;
             dificultadMenu.Enabled = false;
             btnProbar.Enabled = true;
-
 
             if (dificultad == Dificultad.Facil)
             {
@@ -114,26 +108,34 @@ namespace MasterMind
                 intentos = 6;
             }
 
+            //color disponibles
             var muestraColores = new Combinacion(colores, Enumerable.Range(0, cantidadColores));
             coloresDisponibles.Controls.Add(muestraColores);
             muestraColores.Location = new Point(10, 25);
 
+            //crear juego
             game = new Game(cantidadColores, intentos);
 
+            //color secreto
             combinacionSecreta = new Combinacion(colores, game.combinacionSecreta);
             combinacionSecreta.Visible = false;
             coloresSecretos.Controls.Add(combinacionSecreta);
             combinacionSecreta.Location = new Point(10, 25);
 
+            //colores que estamos probando
             combinacionActual = new Combinacion(colores.Take(cantidadColores), Enumerable.Repeat(0, 4), false);
             combinacionesProbadas.Controls.Add(combinacionActual);
+
+            juegoEmpezadoUnaVez = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //probar combinaciones
             var combinacionProbada = combinacionActual.ObtenerYBloquear();
             var resultado = game.ProbarCombinacion(combinacionProbada);
 
+            //lista de ser color negro o blanco, ordenado por negro primero
             var resultadoTransformado = resultado
                 .Select(caracter => caracter switch
                 {
@@ -173,6 +175,29 @@ namespace MasterMind
             comenzarMenu.Enabled = true;
             cancelarPartidaMenu.Enabled = false;
             dificultadMenu.Enabled = true;
+        }
+
+        //Opciones de menu
+        private void ComenzarMenu_Click(object sender, EventArgs e)
+        {
+            IniciarJuego();
+        }
+
+        private void CancelarPartidaMenu_Click(object sender, EventArgs e)
+        {
+            AcabarPartida();
+        }
+
+        private void ComoJugarMenu_Click(object sender, EventArgs e)
+        {
+            ComoJugar cj = new ComoJugar();
+            cj.ShowDialog();
+        }
+
+        private void AcercaDeMenu_Click(object sender, EventArgs e)
+        {
+            AcercaDe ad = new AcercaDe();
+            ad.ShowDialog();
         }
     }
 }
