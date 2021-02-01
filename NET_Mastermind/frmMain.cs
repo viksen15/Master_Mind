@@ -44,6 +44,8 @@ namespace NET_Mastermind {
         private void LlenarColoresDisponibles() {
             ActualizarPanel(ref pnlColoresDisponibles, false);
 
+            pnlColoresDisponibles.Controls.Clear();
+
             for (int i = 0; i < coloresDisponibles.Length; i++) {
                 PictureBox pb = new PictureBox() {
                     BackColor = coloresDisponibles[i],
@@ -223,8 +225,15 @@ namespace NET_Mastermind {
         }
 
         private void coloresToolStripMenuItem_Click(object sender, EventArgs e) {
-            frmSelectorColor f = new frmSelectorColor(coloresDisponibles);
-            f.Show();
+            using (frmSelectorColor f = new frmSelectorColor(coloresDisponibles)) {
+                f.ShowDialog();
+
+                if (f.DialogResult == DialogResult.OK) {
+                    coloresDisponibles = f.Seleccion;
+
+                    LlenarColoresDisponibles();
+                }
+            }            
         }
     }
 }

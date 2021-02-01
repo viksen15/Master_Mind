@@ -11,6 +11,10 @@ using System.Windows.Forms;
 namespace NET_Mastermind {
     public partial class frmSelectorColor : Form {
         private Color[] seleccionActual;
+        public Color[] Seleccion {
+            get => seleccionActual;
+            set => seleccionActual = value; 
+        }
         public frmSelectorColor(Color[] seleccion) {
             InitializeComponent();
 
@@ -27,8 +31,8 @@ namespace NET_Mastermind {
             Controls.Add(p1);
 
             for (int i = 1; i < seleccionActual.Length; i++) {
-
                 x += 56;
+
                 PictureBox p = CrearPictureBox(x, seleccionActual[i], i);
                 p.Click += SeleccionarColor;
                 Controls.Add(p);
@@ -36,14 +40,13 @@ namespace NET_Mastermind {
         }
 
         PictureBox CrearPictureBox(int x, Color color, int number) {
-            PictureBox p1 = new PictureBox();
-            p1.Location = new Point(x, 12);
-            p1.Name = "p" + number;
-            p1.Size = new Size(50, 50);
-            p1.BackColor = color;
-            p1.BorderStyle = BorderStyle.FixedSingle;            
-
-            return p1;
+            return new PictureBox() { 
+                Location = new Point(x, 12),
+                Name = "p" + number,
+                Size = new Size(50, 50),
+                BackColor = color,
+                BorderStyle = BorderStyle.FixedSingle
+            };
         }
 
         private void SeleccionarColor(object sender, EventArgs e) {
@@ -55,11 +58,18 @@ namespace NET_Mastermind {
 
             if (cd.ShowDialog() == DialogResult.OK) {
                 p.BackColor = cd.Color;
-            }
 
-            colorActual = cd.Color;
+                string n = p.Name.Substring(1);
+                int posicion = int.Parse(n);
 
-            
+                seleccionActual[posicion] = cd.Color;
+            }                    
+        }
+        private void btnAceptar_Click(object sender, EventArgs e) {
+            DialogResult = DialogResult.OK;
+        }
+        private void btnCancelar_Click(object sender, EventArgs e) {
+            DialogResult = DialogResult.Cancel;
         }
     }
 }
