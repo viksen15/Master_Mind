@@ -1,0 +1,12 @@
+C:\Users\viiksen\source\repos\Maind_Master\Maind_Master\bin\Debug\Maind_Master.exe.config
+C:\Users\viiksen\source\repos\Maind_Master\Maind_Master\bin\Debug\Maind_Master.exe
+C:\Users\viiksen\source\repos\Maind_Master\Maind_Master\bin\Debug\Maind_Master.pdb
+C:\Users\viiksen\source\repos\Maind_Master\Maind_Master\obj\Debug\Mind_Master.csprojAssemblyReference.cache
+C:\Users\viiksen\source\repos\Maind_Master\Maind_Master\obj\Debug\Maind_Master.Master.resources
+C:\Users\viiksen\source\repos\Maind_Master\Maind_Master\obj\Debug\Maind_Master.Niveles.resources
+C:\Users\viiksen\source\repos\Maind_Master\Maind_Master\obj\Debug\Maind_Master.Opciones.resources
+C:\Users\viiksen\source\repos\Maind_Master\Maind_Master\obj\Debug\Maind_Master.Properties.Resources.resources
+C:\Users\viiksen\source\repos\Maind_Master\Maind_Master\obj\Debug\Mind_Master.csproj.GenerateResource.cache
+C:\Users\viiksen\source\repos\Maind_Master\Maind_Master\obj\Debug\Mind_Master.csproj.CoreCompileInputs.cache
+C:\Users\viiksen\source\repos\Maind_Master\Maind_Master\obj\Debug\Maind_Master.exe
+C:\Users\viiksen\source\repos\Maind_Master\Maind_Master\obj\Debug\Maind_Master.pdb
